@@ -1,10 +1,16 @@
 import React from 'react';
+import { Home } from './components/Home';
+import { Navbar } from './components/Navbar';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 const App = _ => {
   return (
-    <div>
-      <h1>Hello</h1>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Switch>
+        <Route exact path='/' component={Home} />
+      </Switch>
+    </BrowserRouter>
   )
 }
 
