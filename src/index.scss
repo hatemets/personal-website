@@ -34,6 +34,7 @@ $navbarHeight: 120px;
         }
 
         nav {
+            display:flex;
             color: #fff;
             z-index: 2;
             position: fixed;
@@ -41,8 +42,41 @@ $navbarHeight: 120px;
             width: 100vw;
             height: $navbarHeight;
             background: #333;
+
+            .wrapper {
+               display: flex;
+               height: 70%;
+               border: 1px white solid; 
+               justify-content: space-between;
+            }
+
+            #navlist {
+                display: flex;
+                border: 2px yellow solid;
+                width: 40%;
+                min-width: 500px;
+                display: flex;
+                justify-content: space-evenly;
+
+                li {
+                    list-style: none;
+                    border: 1px dashed magenta;
+                    padding: 12px 8px;
+                    border-radius: 6px;
+                    margin: auto 0;
+                }
+
+            }
+
         }
     }
+}
+
+@media screen and (max-width: 800px) {
+}
+
+@media screen and (min-width: 1500px) {
+
 }
 
 *, *::before, *::after {
