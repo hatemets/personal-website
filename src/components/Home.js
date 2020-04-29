@@ -5,8 +5,8 @@ export const Home = _ => {
     return (
         <div id="home">
             <div className="content">
-                <h1>Homepage</h1>
-                <Link to='/'>Click Here!</Link>
+                {/* <h1>Homepage</h1>
+                <Link to='/'>Click Here!</Link> */}
             </div>
         </div>
     )
