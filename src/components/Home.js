@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { pageTransitions } from '../assets/animationProperties';
 
-export const Home = _ => {
+export const Home = () => {
     return (
-        <div id="home">
-            <div className="content">
-                {/* <h1>Homepage</h1>
-                <Link to='/'>Click Here!</Link> */}
-            </div>
-        </div>
+		<motion.div initial="out" animate="in" exit="out" variants={pageTransitions} id="home">
+			<div className="content">
+				<h1>Hello everyone</h1>
+			</div>
+		</motion.div>
     )
 }

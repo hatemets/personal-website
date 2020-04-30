@@ -4,13 +4,15 @@ $navbarHeight: 120px;
     body {
         a:visited {
             color: #ad76da;
-        }
-        
+		}
+
+		text-align: center;
+
         .content {
             position: relative;
             top: $navbarHeight;
-        }
-
+		}
+		
         .wrapper {
             width: 80%;
             margin: auto;
@@ -19,18 +21,18 @@ $navbarHeight: 120px;
         #home {
             width: 100vw;
             height: 100vh;
-            &::after {
-                content: "";
-                background: url('/images/city1.jpg');
-                background-position: center;
-                opacity: 0.7;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                position: absolute;
-                z-index: -1;   
-            }
+            // &::after {
+            //     content: "";
+            //     background: url('/images/city1.jpg');
+            //     background-position: center;
+            //     opacity: 0.7;
+            //     top: 0;
+            //     left: 0;
+            //     bottom: 0;
+            //     right: 0;
+            //     position: absolute;
+            //     z-index: -1;   
+            // }
         }
 
         nav {
@@ -99,6 +101,7 @@ $navbarHeight: 120px;
 
 			#menu-icon {
 				display: block;
+				fill: #fff;
 			}
 		}
 	}
