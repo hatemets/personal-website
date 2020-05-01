@@ -1,10 +1,15 @@
-export const pageTransitions = {
+export const pageVariants = {
+	initial: {
+		x: "100vw",
+	},
 	in: {
-		opacity: 1,
-		x: 0
+		x: 0,
 	},
 	out: {
-		opacity: 0,
-		x: "100vw",
+		x: "-100vw",
 	}
+}
+
+export const pageTransitions = {
+	duration: 0.3,
 }

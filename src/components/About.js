@@ -1,13 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { pageTransitions } from '../assets/animationProperties';
+import { pageVariants, pageTransitions } from '../assets/animationProperties';
 
 export const About = () => {
-	console.log(pageTransitions);
-	
 	return (
-		<motion.div initial="out" animate="in" exit="out" variants={pageTransitions} className="content">
-			<h1>About page</h1>
+		<motion.div 
+		initial="out"
+		animate="in" 
+		exit="out" 
+		variants={pageVariants}
+		transition={pageTransitions}
+		className="content">
+			<div className="card">
+				<h1>About page</h1>
+				<p>Velit ut et reprehenderit minim in elit ad. Ut mollit velit officia magna enim do ex id ullamco incididunt anim. Cillum esse esse veniam exercitation velit velit sit ad esse sit magna. Ut ullamco irure ea est aute velit et irure voluptate Lorem ex dolore. Velit nostrud ut nisi excepteur. Do veniam dolor commodo aliqua aliqua excepteur.</p>
+			</div>
 		</motion.div>
 	)
 }
