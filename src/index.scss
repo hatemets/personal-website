@@ -1,17 +1,24 @@
 $navbarHeight: 120px;
+$mainColor: #333;
+$secondaryColor: #ccc;
 
 * {
     body {
-		background-color: #ddd;
+		background-color: $secondaryColor;
 
 		.card {
-			margin: 25px auto 0 auto ;
+			margin: 25px auto 0 auto;
 			max-width: 800px;
-			border: 1px solid #000;
 			border-radius: 6px;
-			padding: 12px;
-			background: #444;
+			padding: 18px;
+			background: $mainColor;
 			color: #ddd;
+			
+			.card-image {
+				max-width: 100%;
+				border-radius: 6px;
+				min-width: 250px;
+			}
 		}
 
         nav {
@@ -19,17 +26,17 @@ $navbarHeight: 120px;
             color: #fff;
             z-index: 2;
             position: fixed;
-            opacity: 0.8;
+            opacity: 1;
             width: 100vw;
             height: $navbarHeight;
-			background: #333;
+			background: $mainColor;
 			
 
 			#brand-logo {
 				max-width: 70px;
 			}
 
-			#menu-icon {
+			#menu-icon, #menu-icon-container {
 				display: none;
 			}
 
@@ -71,7 +78,9 @@ $navbarHeight: 120px;
 
 @media screen and (max-width: 800px) {
 	body {
+
 		nav {
+
 			#navlist {
 				display: none;
 			}
@@ -84,7 +93,6 @@ $navbarHeight: 120px;
 				margin: auto 0;
 				max-width: 45px;
 				max-height: 42px;
-				border: 1px white solid;
 			}
 
 			#menu-icon {

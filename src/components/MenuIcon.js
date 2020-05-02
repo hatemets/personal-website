@@ -15,7 +15,7 @@ export const MenuIcon = (props) => {
 	}
 	
 	return (
-		<div onClick={handleClick} className="container">
+		<div onClick={handleClick} id="menu-icon-container" className="container">
 			<svg id="menu-icon">
 				<animated.rect transform={ top } width="40" height="3" rx="3"></animated.rect>
 				<animated.rect transform={ center } width="40" height="3" rx="3"></animated.rect>

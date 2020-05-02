@@ -12,7 +12,7 @@ const App = _ => {
 	return (
 		<div id="App">
 			<Navbar />
-			<AnimatePresence>
+			<AnimatePresence exitBeforeEnter>
 				<Switch location={location} key={location.pathname}>
 					<Route exact path='/' component={Home}/>
 					<Route path='/about' component={About}/>
