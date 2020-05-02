@@ -14,21 +14,21 @@ export const Home = () => {
 			variants={pageVariants}
 			transition={pageTransition}
 			className="content">
-				<motion.h1
-				initial="initial"
-				animate="animate"
-				variants={popupVariants}
-				transition={popupTransition}
-				id="popup-text">
-				Hi, I'm Mark</motion.h1>
+				<div className="card">
+					<motion.h1
+					initial="initial"
+					animate="animate"
+					variants={popupVariants}
+					transition={popupTransition}
+					id="popup-text">
+					Hi, I'm Mark</motion.h1>
+				</div>
 
 				<div className="card">
-					<h1>Homepage</h1>
-					<p>Do eiusmod exercitation pariatur ea est proident voluptate irure magna laboris mollit non irure. Aliquip elit adipisicing duis esse eiusmod enim pariatur magna. Est ullamco eiusmod sit dolore laborum pariatur qui voluptate qui adipisicing. Magna minim consectetur aliquip nostrud commodo incididunt consequat est culpa ea.</p>
+					<h1>Thank you for visiting my website!</h1>
+					<p>Here you can find out more about who I am and what I do. In addition, you can also take a look at some of the projects that I've been working on.</p>
 				</div>
-				<div className="card">
-					<img className="card-image" src="/images/trackandfield1.jpg" alt="T&F"/>
-				</div>
+				<img src="/images/trackandfield1.jpg" alt="T&F"/>
 		</motion.div>
     )
 }

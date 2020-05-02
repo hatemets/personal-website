@@ -1,35 +1,13 @@
-$navbarHeight: 120px;
-$mainColor: #333333;
-$textColor: #eee;
-$secondaryColor: #ccc;
+@import 'styles/_base';
 
 * {
     body {
 		// background-color: $secondaryColor;
-		background-image: url(/images/wallpaperdark1.jpg);
+		background-image: url(/images/trees.jpg);
 
-		.card {
-			margin: 15px auto;
-			max-width: 1000px;
-			border-radius: 6px;
-			padding: 18px;
-			color: $textColor;
-			background: $mainColor+e6;
-			
-			&::after {
-				content: "";
-				width: 100px;
-				height: 100px;
-				position: relative;
-				opacity: 0.9;
-			}
-			
-			.card-image {
-				opacity: 1;
-				max-width: 100%;
-				border-radius: 6px;
-				min-width: 250px;
-			}
+		img {
+			width: 100%;
+			border-radius: 4px;
 		}
 
         nav {
@@ -114,8 +92,6 @@ $secondaryColor: #ccc;
 	}
 }
 
-@media screen and (min-width: 1500px) {}
-
 #popup-text {
 	color: #fff;
 	font-size: 86px;
@@ -131,33 +107,6 @@ $secondaryColor: #ccc;
 	to {
 		// width: 10px;
 		width: 16em;
-	}
-}
-
-*, *::before, *::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-.content {
-	text-align: center;
-	line-height: 1.5;
-	position: absolute;
-	top: $navbarHeight;
-	width: 80%;
-	margin: 0 10vw;
-}
-
-.wrapper {
-	width: 80%;
-	margin: auto;
-}
-
-a {
-	text-decoration: none;
-	&:visited {
-		color: $textColor;
 	}
 }
 
