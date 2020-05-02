@@ -1,20 +1,31 @@
 $navbarHeight: 120px;
-$mainColor: #333;
+$mainColor: #333333;
+$textColor: #eee;
 $secondaryColor: #ccc;
 
 * {
     body {
-		background-color: $secondaryColor;
+		// background-color: $secondaryColor;
+		background-image: url(/images/wallpaperdark1.jpg);
 
 		.card {
-			margin: 25px auto 0 auto;
-			max-width: 800px;
+			margin: 15px auto;
+			max-width: 1000px;
 			border-radius: 6px;
 			padding: 18px;
-			background: $mainColor;
-			color: #ddd;
+			color: $textColor;
+			background: $mainColor+e6;
+			
+			&::after {
+				content: "";
+				width: 100px;
+				height: 100px;
+				position: relative;
+				opacity: 0.9;
+			}
 			
 			.card-image {
+				opacity: 1;
 				max-width: 100%;
 				border-radius: 6px;
 				min-width: 250px;
@@ -23,7 +34,7 @@ $secondaryColor: #ccc;
 
         nav {
             display:flex;
-            color: #fff;
+            color: $textColor;
             z-index: 2;
             position: fixed;
             opacity: 1;
@@ -65,7 +76,7 @@ $secondaryColor: #ccc;
 
 						&:hover {
 							background-color: #001;
-							color: #ddd;
+							color: $textColor;
 						}
 					}
                 }
@@ -103,8 +114,24 @@ $secondaryColor: #ccc;
 	}
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1500px) {}
 
+#popup-text {
+	color: #fff;
+	font-size: 86px;
+	margin: auto;
+	max-width: 700px;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+@keyframes typewriter {
+	from {
+		width: 0;
+	}
+	to {
+		// width: 10px;
+		width: 16em;
+	}
 }
 
 *, *::before, *::after {
@@ -130,6 +157,7 @@ $secondaryColor: #ccc;
 a {
 	text-decoration: none;
 	&:visited {
-		color: #fff;
+		color: $textColor;
 	}
 }
+
