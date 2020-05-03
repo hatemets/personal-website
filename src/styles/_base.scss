@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Baskervville');
+
 // Variables
+$mainFont: 'Josefin Sans';
+$popupFont: 'Baskervville';
 $navbarHeight: 120px;
 $mainColor: #333333;
 $textColor: #eee;
@@ -19,7 +24,7 @@ $secondaryColor: #ccc;
 	border-radius: 6px;
 	padding: 18px;
 	color: $textColor;
-	background: $mainColor+e6;
+	background: $mainColor + b2;
 }
 
 .wrapper {
@@ -30,7 +35,9 @@ $secondaryColor: #ccc;
 *, *::before, *::after {
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
+	margin: 0;
+	font-family: $mainFont;
+	line-height: 1.5;
 }
 
 .content {

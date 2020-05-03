@@ -7,28 +7,48 @@ export const Home = () => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 	
     return (
-		<motion.div
-			initial="initial"
-			animate="in"
-			exit="out"
-			variants={pageVariants}
-			transition={pageTransition}
-			className="content">
-				<div className="card">
-					<motion.h1
+		<>
+			<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			id="image-one">
+				<motion.div
 					initial="initial"
-					animate="animate"
-					variants={popupVariants}
-					transition={popupTransition}
-					id="popup-text">
-					Hi, I'm Mark</motion.h1>
-				</div>
+					animate="in"
+					exit="out"
+					variants={pageVariants}
+					transition={pageTransition}
+					className="content">
+							<div className="card">
+								<motion.h1
+								initial="initial"
+								animate="animate"
+								variants={popupVariants}
+								transition={popupTransition}
+								id="popup-text">
+								Hi, I'm Mark</motion.h1>
+							</div>
+							<div className="card">
+								<h1>Thank you for visiting my website!</h1>
+								<p>Here you can find out more about who I am and what I do. In addition, you can also take a look at some of the projects that I've been working on.</p>
+							</div>
+				</motion.div>
+			</motion.div>
+			
+			<section>
+				<h1 className="s1">Who am I?</h1>
+				<p className="s2">Nostrud enim id sunt amet laborum nulla.qui cillum minim mollit qui eu. Irure ut voluptate culpa est officia deserunt cupidatat sit velit. Irure sint sit labore do aliqua ut velit veniam ut tempor non deserunt sint.</p>
+				<div className="s3"></div>
+			</section>
 
-				<div className="card">
-					<h1>Thank you for visiting my website!</h1>
-					<p>Here you can find out more about who I am and what I do. In addition, you can also take a look at some of the projects that I've been working on.</p>
-				</div>
-				<img src="/images/trackandfield1.jpg" alt="T&F"/>
-		</motion.div>
+			<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			id="image-two">
+
+			</motion.div>
+		</>
     )
 }
