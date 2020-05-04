@@ -1,0 +1,29 @@
+// Background images 
+.image {
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	height: 700px;
+}
+
+#image-one {
+	background-image: url(/images/trees.jpg);
+}
+
+#image-two {
+	background-image: url(/images/codingpic.jpg);
+	position: relative;
+	height: 600px;
+
+	&::after {
+		content: "";
+		background: #fff;
+		position: absolute;
+		width: 100%;
+		opacity: 0.15;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		top: 0;
+	}
+}

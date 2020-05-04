@@ -7,12 +7,10 @@ export const Home = () => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 	
     return (
-		<>
-			<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}
-			id="image-one">
+		<motion.div initial={{ opacity: 0 }}
+		animate={{ opacity: 1 }}
+		exit={{ opacity: 0 }}>
+			<motion.div id="image-one" className="image">
 				<motion.div
 					initial="initial"
 					animate="in"
@@ -35,7 +33,7 @@ export const Home = () => {
 							</div>
 				</motion.div>
 			</motion.div>
-			
+
 			<section>
 				<h1 className="s1">Who am I?</h1>
 				<p className="s2">Nostrud enim id sunt amet laborum nulla.qui cillum minim mollit qui eu. Irure ut voluptate culpa est officia deserunt cupidatat sit velit. Irure sint sit labore do aliqua ut velit veniam ut tempor non deserunt sint.</p>
@@ -46,9 +44,10 @@ export const Home = () => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
-			id="image-two">
-
+			id="image-two"
+			className="image">
+				
 			</motion.div>
-		</>
+		</motion.div>
     )
 }
