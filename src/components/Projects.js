@@ -6,11 +6,7 @@ export const Projects = () => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 
 	return (
-		<motion.div
-		initial={{ opacity: 0 }}
-		animate={{ opacity: 1 }}
-		exit={{ opacity: 0 }}
-		id="projects">
+		<div className="component-container">
 			<motion.div 
 			initial="out" 
 			animate="in" 
@@ -23,6 +19,6 @@ export const Projects = () => {
 					<p>Velit ut et reprehenderit minim in elit ad. Ut mollit velit officia magna enim do ex id ullamco incididunt anim. Cillum esse esse veniam exercitation velit velit sit ad esse sit magna. Ut ullamco irure ea est aute velit et irure voluptate Lorem ex dolore. Velit nostrud ut nisi excepteur. Do veniam dolor commodo aliqua aliqua excepteur.</p>
 				</div>
 			</motion.div>
-		</motion.div>
+		</div>
 	)
 }

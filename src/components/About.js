@@ -6,11 +6,7 @@ export const About = () => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 
 	return (
-		<motion.div
-		initial={{ opacity: 0 }}
-		animate={{ opacity: 1 }}
-		exit={{ opacity: 0 }}
-		id="about">
+		<div className="component-container">
 			<motion.div 
 			initial="out"
 			animate="in" 
@@ -27,6 +23,6 @@ export const About = () => {
 					</p>
 				</div>
 			</motion.div>
-		</motion.div>
+		</div>
 	)
 }

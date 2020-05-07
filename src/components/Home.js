@@ -7,9 +7,7 @@ export const Home = () => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 	
     return (
-		<motion.div initial={{ opacity: 0 }}
-		animate={{ opacity: 1 }}
-		exit={{ opacity: 0 }}>
+		<div className="component-wrapper">
 			<motion.div id="image-one" className="image">
 				<motion.div
 					initial="initial"
@@ -34,7 +32,7 @@ export const Home = () => {
 				</motion.div>
 			</motion.div>
 
-			<section>
+			<section id="section-one">
 				<h1 className="s1">Who am I?</h1>
 				<p className="s2">Nostrud enim id sunt amet laborum nulla.qui cillum minim mollit qui eu. Irure ut voluptate culpa est officia deserunt cupidatat sit velit. Irure sint sit labore do aliqua ut velit veniam ut tempor non deserunt sint.</p>
 				<div className="s3"></div>
@@ -45,9 +43,13 @@ export const Home = () => {
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
 			id="image-two"
-			className="image">
-				
-			</motion.div>
-		</motion.div>
+			className="image"></motion.div>
+
+			<section id="section-two">
+				<h1>Some Cool Text</h1>
+				<p>Irure nisi esse aliqua dolore culpa esse non incididunt sunt ipsum. Sit eiusmod minim do nisi ut occaecat mollit sint amet ea. Do aliqua reprehenderit cupidatat ullamco ipsum. Id anim ipsum voluptate ipsum proident cupidatat dolor do ullamco. Nisi commodo deserunt Lorem Lorem magna esse nostrud irure.</p>
+			</section>
+
+		</div>
     )
 }
