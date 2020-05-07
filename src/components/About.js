@@ -1,20 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { pageVariants, pageTransitions } from '../assets/animationProperties';
+import { pageAnimation } from '../assets/animationProperties';
 
 export const About = () => {
+	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
+
 	return (
-		<motion.div 
-		initial="out"
-		animate="in" 
-		exit="out" 
-		variants={pageVariants}
-		transition={pageTransitions}
-		className="content">
-			<div className="card">
-				<h1>About page</h1>
-				<p>Velit ut et reprehenderit minim in elit ad. Ut mollit velit officia magna enim do ex id ullamco incididunt anim. Cillum esse esse veniam exercitation velit velit sit ad esse sit magna. Ut ullamco irure ea est aute velit et irure voluptate Lorem ex dolore. Velit nostrud ut nisi excepteur. Do veniam dolor commodo aliqua aliqua excepteur.</p>
-			</div>
-		</motion.div>
+		<div className="component-container">
+			<motion.div 
+			initial="out"
+			animate="in" 
+			exit="out" 
+			variants={pageVariants}
+			transition={pageTransition}
+			className="content">
+				<div className="card">
+					<h1>About me</h1>
+					<p>Who am I, anyway? My name is Mark Heidmets and I'm currently
+						studying at Gustav Adolf Grammar School in Tallinn, Estonia.
+						I have been programming for approximately two years, focusing
+						mainly on web design and technologies.
+					</p>
+				</div>
+			</motion.div>
+		</div>
 	)
 }
