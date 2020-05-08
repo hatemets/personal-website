@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 @import url('https://fonts.googleapis.com/css?family=Baskervville');
 
+
 // Variables
 $mainFont: 'Josefin Sans';
 $popupFont: 'Baskervville';
@@ -8,6 +9,12 @@ $navbarHeight: 120px;
 $mainColor: #333333;
 $textColor: #eee;
 $secondaryColor: #ccc;
+
+// Exports
+:export {
+	navbarHeight: $navbarHeight;
+	mainColor: $mainColor;
+}
 
 // Mixins
 @mixin transform($property) {
@@ -58,4 +65,9 @@ a {
 
 p {
 	font-size: 18px;
+}
+
+// Details
+.dark {
+	background: $mainColor;
 }

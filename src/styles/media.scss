@@ -4,18 +4,17 @@
 	background-attachment: fixed;
 	background-position: center;
 	height: 700px;
+	width: 100vw;
 }
 
 #image-one {
 	background-image: url(/images/trees.jpg);
-	width: 100vw;
 }
 
 #image-two {
 	background-image: url(/images/codingpic.jpg);
 	position: relative;
 	height: 600px;
-	width: 100vw;
 
 	&::after {
 		content: "";
