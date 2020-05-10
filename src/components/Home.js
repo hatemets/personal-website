@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { pageAnimation, popupAnimation } from '../assets/animationProperties';
 
@@ -47,7 +47,6 @@ export const Home = () => {
 				<h1>Some Cool Text</h1>
 				<p>Irure nisi esse aliqua dolore culpa esse non incididunt sunt ipsum. Sit eiusmod minim do nisi ut occaecat mollit sint amet ea. Do aliqua reprehenderit cupidatat ullamco ipsum. Id anim ipsum voluptate ipsum proident cupidatat dolor do ullamco. Nisi commodo deserunt Lorem Lorem magna esse nostrud irure.</p>
 			</section>
-
 		</motion.div>
     )
 }

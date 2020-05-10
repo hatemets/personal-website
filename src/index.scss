@@ -4,53 +4,52 @@
 * {
     body {
 		overflow-x: hidden;
-
         nav {
-			display:flex;
-            color: $textColor;
-            z-index: 2;
-            position: fixed;
-            opacity: 1;
-            width: 100vw;
-            height: $navbarHeight;
-			background: $mainColor;
-			transition: background 200ms;
+		display:flex;
+		color: $textColor;
+		z-index: 2;
+		position: fixed;
+		opacity: 1;
+		width: 100vw;
+		height: $navbarHeight;
+		background: $mainColor + bb;
+		transition: background 200ms;
 			
-			#brand-logo {
-				max-width: 70px;
-			}
+		#brand-logo {
+			max-width: 70px;
+		}
+		
+		#menu-icon-container {
+			display: none;
+		}
 			
-			#menu-icon-container {
-				display: none;
-			}
-			
-            .wrapper {
-				display: flex;
-				height: 70%;
-				justify-content: space-between;
-			}
+.wrapper {
+		display: flex;
+		height: 70%;
+		justify-content: space-between;
+	}
 			
             #navlist {
-				display: flex;
+		display: flex;
                 width: 40%;
                 min-width: 500px;
                 display: flex;
-				justify-content: space-evenly;
+		justify-content: space-evenly;
 				
                 li {
-					list-style: none;
-					margin: auto 0;
-					
-					a {
-						font-size: 1.1rem;
-						border-radius: 6px;
-						padding: 20px;
-						transition: color 200ms;
+			list-style: none;
+			margin: auto 0;
+			
+			a {
+				font-size: 1.2rem;
+				border-radius: 6px;
+				padding: 20px;
+				transition: color 200ms;
 
-						&:hover {
-							color: #ffa500;
-						}
-					}
+				&:hover {
+					color: #ffa500;
+				}
+			}
                 }
 
             }
@@ -59,38 +58,64 @@
     }
 }
 
-// @media screen and (max-width: 800px) {
-// 	body {
-
-// 		nav {
-// 			#navlist {
-// 				display: none;
-// 			}
-
-// 			.wrapper {
-// 				display: flex;
-// 			}
+@media screen and (max-width: 800px) {
+	body {
+		nav {
+			#navlist {
+				display: none;
+			}
 			
-// 			.container {
-// 				margin: auto 0;
-// 				max-width: 45px;
-// 				max-height: 42px;
-// 			}
+			.wrapper {
+				display: flex;
+			}
+     		
+			.container {
+				margin: auto 0;
+				max-width: 45px;
+				max-height: 42px;
+			}
 
-// 			#menu-icon {
-// 				display: block;
-// 				fill: #fff;
-// 			}
-// 		}
-// 	}
-// }
+			#menu-icon, #menu-icon-container {
+				display: none;
+//				display: block;
+				fill: #fff;
+				cursor: pointer;
+			}
+
+			.container {
+				width: 600px;
+				border: 1px solid green;
+				svg {
+					position: relative;
+					margin: auto;
+					border: 1px red dashed;
+				}
+			}
+		}
+
+
+	}
+}
 
 #popup-text {
 	color: #fff;
-	font-size: 86px;
+	font-size: 4.5em;
 	margin: auto;
 	max-width: 700px;
 	font-family: $popupFont;
+	white-space: nowrap;
+	letter-spacing: 2px;
+	overflow: hidden;
+	animation: typewriter 2000ms steps(12, end);
+}
+
+@keyframes typewriter {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
 }
 
 .component-container {

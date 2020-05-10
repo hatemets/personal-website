@@ -9,16 +9,16 @@ import variables from './styles/_base.scss';
 
 const App = () => {
 	const location = useLocation();
-	const navigationBarHeight = Number(variables.navbarHeight.slice(0, -2));
-	const color = variables.mainColor;
+	const { color, opacity, navbarHeight } = variables;
+	const navigationBarHeight = Number(navbarHeight.slice(0, -2));
 	
 	useEffect(_ => {
 		let navigationBar = document.querySelector('nav');
 
 		document.addEventListener('scroll', () => {
-			let content = document.querySelector('.card');
-			let rect = content.getBoundingClientRect();
-			navigationBar.style.background = rect.y < navigationBarHeight ? color : color + "bb";
+			const content = document.querySelector('.card');
+			const rect = content.getBoundingClientRect();
+			navigationBar.style.background = rect.y < navigationBarHeight ? color : color + opacity;
 		});
 	});
 

@@ -9,6 +9,10 @@
 
 #image-one {
 	background-image: url(/images/trees.jpg);
+
+	.content {
+		display: inline-block;
+	}
 }
 
 #image-two {
