@@ -27,14 +27,14 @@ export const Home = () => {
   };
 
   let indexList = [];
-
+  
   while (indexList.length < popupString.length) {
     const index = Math.floor(Math.random() * popupString.length);
     if (!indexList.includes(index)) indexList.push(index);
   }
 
   return (
-    <motion.div className="component-wrapper">
+    <motion.div>
       <div id="image-one" className="image">
         <motion.div
           initial="initial"

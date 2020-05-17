@@ -3,7 +3,8 @@ import { Home } from "./components/Home";
 import { Navbar } from "./components/Navbar";
 import { Projects } from "./components/Projects";
 import { About } from "./components/About";
-import { Test } from "./components/Test.js";
+import { Test } from "./components/Test";
+import { Footer } from "./components/Footer";
 import { AnimatePresence } from "framer-motion";
 import { Route, Switch, useLocation } from "react-router-dom";
 import variables from "./styles/_base.scss";
@@ -27,14 +28,17 @@ const App = () => {
   return (
     <div id="App">
       <Navbar />
-      <AnimatePresence exitBeforeEnter>
-        <Switch location={location} key={location.pathname}>
-          <Route exact path="/" component={Home} />
-          <Route path="/contact" component={About} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/test" component={Test} />
-        </Switch>
-      </AnimatePresence>
+      <div id="main-content">
+        <AnimatePresence exitBeforeEnter>
+          <Switch location={location} key={location.pathname}>
+            <Route exact path="/" component={Home} />
+            <Route path="/contact" component={About} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/test" component={Test} />
+          </Switch>
+        </AnimatePresence>
+      </div>
+      <Footer />
     </div>
   );
 };
