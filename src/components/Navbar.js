@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { MenuIcon } from "./MenuIcon";
+import { Sidebar } from "./Sidebar";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
@@ -11,6 +12,7 @@ export const Navbar = () => {
         <Link to="/">
           <img id="brand-logo" src="/images/letterM.png" alt="M" />
         </Link>
+
         <ul id="navlist">
           <li>
             <Link to="/">Home</Link>
@@ -22,7 +24,9 @@ export const Navbar = () => {
             <Link to="/projects">Projects</Link>
           </li>
         </ul>
+
         <MenuIcon isOpened={opened} toggleMenu={toggle} />
+        <Sidebar isOpened={opened} toggleMenu={toggle} />
       </div>
     </nav>
   );

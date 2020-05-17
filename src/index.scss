@@ -2,6 +2,7 @@
 @import "styles/media.scss";
 @import "styles/responsive.scss";
 
+// Main
 * {
   body {
     overflow-x: hidden;
@@ -63,6 +64,7 @@
     #section-one {
       display: grid;
       padding: 20px;
+      height: 300px;
       grid-template: repeat(3, 1fr) / repeat(4, 1fr);
       grid-gap: 10px;
 
@@ -82,7 +84,7 @@
         width: 90%;
         position: relative;
         margin: auto;
-        padding: 15px;
+        padding: 5px;
         border-width: 1px;
       }
 
@@ -95,7 +97,7 @@
     }
 
     footer {
-      position: relative;
+      position: absolute;
       display: flex;
       justify-content: space-between;
       height: $footerHeight;
@@ -107,11 +109,15 @@
         text-align: center;
         margin: 5px;
         padding: 5px;
-      }
-      #facebook,
-      #email,
-      #instagram {
         margin-bottom: 10px;
+      }
+
+      #facebook {
+        color: #3b5998;
+      }
+
+      #instagram {
+        color: #fb3958;
       }
     }
   }
@@ -178,8 +184,46 @@
 
     #popup-text-container {
       #letter {
-        font-size: 2rem;
+        font-size: 3rem;
       }
+    }
+
+    // Footer
+    footer {
+      flex-direction: column;
+      position: relative;
+      top: 100%;
+      bottom: 0%;
+      height: auto;
+
+      #facebook {
+        transform: translateX(-3px);
+      }
+
+      #email {
+        transform: scale(0.85) translateX(8px);
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+
+        > * {
+          margin: 0 15px;
+        }
+
+        p {
+          margin: auto 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    #section-one {
+      height: 380px;
     }
   }
 }
@@ -225,7 +269,7 @@ section {
   width: 100vw;
   text-align: center;
   background: #ddd;
-  max-height: 350px;
+  max-height: auto;
 
   h1 {
     font-size: 40px;
@@ -233,7 +277,6 @@ section {
 }
 
 #section-two {
-  max-height: 200px;
   padding: 25px;
 
   > * {
@@ -249,4 +292,42 @@ section {
   border: 1px dashed;
   border-top: none;
   font-family: monospace;
+}
+
+#sidebar {
+  display: flex;
+  flex-flow: column nowrap;
+  position: fixed;
+  background: #444;
+  border-left: 1px solid black;
+  width: 250px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 2s;
+
+  ul {
+    position: relative;
+    top: 10%;
+
+    li {
+      width: 90%;
+      border-radius: 8px;
+      padding: 10px 0;
+      margin: 5px auto;
+      background: #333;
+      text-align: center;
+      transition: background 200ms;
+
+      &:hover {
+        background: #222;
+      }
+
+      a {
+        border-radius: 5px;
+        padding: 15px;
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
