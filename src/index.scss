@@ -296,31 +296,41 @@ section {
 
 #sidebar {
   display: flex;
+  z-index: 3;
   flex-flow: column nowrap;
   position: fixed;
   background: #444;
-  border-left: 1px solid black;
-  width: 250px;
   height: 100vh;
   top: 0;
   left: 0;
-  transition: all 2s;
+  transition: all 300ms;
+
+  &.opened {
+    width: 240px;
+
+    // a {
+    //   opacity: 1;
+    // }
+  }
+
+  &.closed {
+    width: 0px;
+    // a {
+    //   opacity: 0;
+    // }
+  }
 
   ul {
-    position: relative;
-    top: 10%;
-
     li {
+      list-style-type: none;
       width: 90%;
-      border-radius: 8px;
       padding: 10px 0;
       margin: 5px auto;
-      background: #333;
       text-align: center;
       transition: background 200ms;
 
       &:hover {
-        background: #222;
+        background: #333;
       }
 
       a {

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { pageAnimation, popupAnimation } from "../assets/animationProperties";
+import { pageAnimation } from "../assets/animationProperties";
 
 export const Home = () => {
   const { variants: pageVariants, transition: pageTransition } = pageAnimation;
@@ -27,7 +27,7 @@ export const Home = () => {
   };
 
   let indexList = [];
-  
+
   while (indexList.length < popupString.length) {
     const index = Math.floor(Math.random() * popupString.length);
     if (!indexList.includes(index)) indexList.push(index);

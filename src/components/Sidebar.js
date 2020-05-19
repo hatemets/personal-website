@@ -1,22 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export const Sidebar = ({ isOpened, toggleMenu }) => {
-  const handleClick = () => {
-    toggleMenu(!isOpened);
+  const handleClick = _ => toggleMenu(!isOpened);
+
+  const variants = {
+    open: {
+      transition: {
+        staggerChildren: 0,
+        delayChildren: 0
+      }
+    },
+    closed: {
+      transition: {
+        staggerChildren: 0,
+        delayChildren: 0
+      }
+    }
   };
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: isOpened ? 1 : 0 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
       id="sidebar"
-      className={isOpened ? "visible" : "hidden"}
+      className="opened"
+      animate={{ x: isOpened ? 0 : -250 }}
+      transition={{ delay: 0.1, type: "tween", default: { duration: 0.1 } }}
     >
-      <ul>
+      <motion.ul variants={variants}>
         <li>
           <Link onClick={handleClick} to="/">
             Home
@@ -34,7 +45,7 @@ export const Sidebar = ({ isOpened, toggleMenu }) => {
             Projects
           </Link>
         </li>
-      </ul>
+      </motion.ul>
     </motion.div>
   );
 };

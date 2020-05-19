@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { menuIconValues } from "../assets/animationProperties";
 
 export const MenuIcon = ({ isOpened, toggleMenu }) => {
   const { initial, open, closed } = menuIconValues;
-  const { top, center, bottom } = isOpened
-    ? menuIconValues.closed
-    : menuIconValues.open;
+  const { top, center, bottom } = isOpened ? closed : open;
 
   return (
     <div

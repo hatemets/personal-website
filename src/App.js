@@ -1,9 +1,8 @@
-import React, { useEffect, useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 import { Home } from "./components/Home";
 import { Navbar } from "./components/Navbar";
 import { Projects } from "./components/Projects";
 import { About } from "./components/About";
-import { Test } from "./components/Test";
 import { Footer } from "./components/Footer";
 import { AnimatePresence } from "framer-motion";
 import { Route, Switch, useLocation } from "react-router-dom";
@@ -34,7 +33,6 @@ const App = () => {
             <Route exact path="/" component={Home} />
             <Route path="/contact" component={About} />
             <Route path="/projects" component={Projects} />
-            <Route path="/test" component={Test} />
           </Switch>
         </AnimatePresence>
       </div>
