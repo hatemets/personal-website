@@ -1,21 +1,29 @@
 import React, { useState, useEffect } from "react";
+import { motion, useCycle } from "framer";
 import { MenuIcon } from "./MenuIcon";
 import { Sidebar } from "./Sidebar";
 import { Link } from "react-router-dom";
+import { NavItem } from "./NavItem";
+
+const sidebarVariants = {
+  open: {
+    clipPath: "circle(1000px at 0 0)"
+    // transition: {
+    //   staggerChildren: 0,
+    //   delayChildren: 0
+    // }
+  },
+  closed: {
+    clipPath: "circle(0px at 0 0)"
+    // transition: {
+    //   staggerChildren: 0,
+    //   delayChildren: 0
+    // }
+  }
+};
 
 export const Navbar = () => {
-  const [opened, toggle] = useState(false);
-
-  useEffect(_ => {
-    // document.addEventListener("click", _ => {
-    //   const sidebar = document.querySelector("#sidebar");
-    //   sidebar.classList = !opened ? "opened" : "closed";
-    // });
-
-    console.log("Is opened:", opened);
-    console.log(document.querySelector("#sidebar").classList[0]);
-    console.log("-".repeat(35));
-  });
+  const [isOpen, toggleMenu] = useCycle(false, true);
 
   return (
     <nav>
@@ -25,19 +33,19 @@ export const Navbar = () => {
         </Link>
 
         <ul id="navlist">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link to="/projects">Projects</Link>
-          </li>
+          <NavItem location={"/"} innerText={"Home"} />
+          <NavItem location={"/contact"} innerText={"Contact"} />
+          <NavItem location={"/projects"} innerText={"Projects"} />
         </ul>
 
-        <MenuIcon isOpened={opened} toggleMenu={toggle} />
-        <Sidebar isOpened={opened} toggleMenu={toggle} />
+        <motion.div
+          id="small-screen"
+          initial={false}
+          animate={isOpen ? "open" : "closed"}
+        >
+          <MenuIcon toggle={_ => toggleMenu()} />
+          <motion.Sidebar variants={sidebarVariants} />
+        </motion.div>
       </div>
     </nav>
   );

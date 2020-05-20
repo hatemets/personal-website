@@ -2,40 +2,27 @@ import React from "react";
 import { motion } from "framer-motion";
 import { menuIconValues } from "../assets/animationProperties";
 
-export const MenuIcon = ({ isOpened, toggleMenu }) => {
-  const { initial, open, closed } = menuIconValues;
-  const { top, center, bottom } = isOpened ? closed : open;
+const Path = props => (
+  <motion.path
+    stroke="white"
+    fill="transparent"
+    strokeWidth="4"
+    strokeLinecap="round"
+    {...props}
+  ></motion.path>
+);
 
+export const MenuIcon = ({ toggle }) => {
   return (
     <div
-      onClick={_ => toggleMenu(!isOpened)}
+      onClick={_ => toggle()}
       id="menu-icon-container"
       className="container"
     >
       <svg id="menu-icon">
-        <motion.rect
-          initial={initial}
-          animate={top}
-          width="40"
-          height="3"
-          rx="3"
-        ></motion.rect>
-
-        <motion.rect
-          initial={initial}
-          animate={center}
-          width="40"
-          height="3"
-          rx="3"
-        ></motion.rect>
-
-        <motion.rect
-          initial={initial}
-          animate={bottom}
-          width="40"
-          height="3"
-          rx="3"
-        ></motion.rect>
+        <Path d="M 8 14 L 40 10" />
+        <Path d="M 8 28 L 40 20" />
+        <Path d="M 8 42 L 40 30" />
       </svg>
     </div>
   );

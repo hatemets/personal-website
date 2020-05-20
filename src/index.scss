@@ -148,6 +148,10 @@
         fill: #fff;
         cursor: pointer;
       }
+
+      #menu-icon {
+        border: 1px dashed white;
+      }
     }
 
     #section-one {
@@ -301,24 +305,10 @@ section {
   position: fixed;
   background: #444;
   height: 100vh;
+  width: 250px;
   top: 0;
   left: 0;
   transition: all 300ms;
-
-  &.opened {
-    width: 240px;
-
-    // a {
-    //   opacity: 1;
-    // }
-  }
-
-  &.closed {
-    width: 0px;
-    // a {
-    //   opacity: 0;
-    // }
-  }
 
   ul {
     li {

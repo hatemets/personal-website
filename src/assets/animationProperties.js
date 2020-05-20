@@ -32,7 +32,7 @@ export const popupAnimation = {
 };
 
 export const menuIconValues = {
-  initial: {transform: "rotate(0deg) translate(0px, 0px)"},
+  initial: { transform: "rotate(0deg) translate(0px, 0px)" },
   open: {
     top: { transform: "rotate(0deg) translate(4px, 12px)" },
     center: { transform: "rotate(0deg) translate(4px, 22px)" },
