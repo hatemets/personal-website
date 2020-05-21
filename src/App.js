@@ -4,7 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { Projects } from "./components/Projects";
 import { About } from "./components/About";
 import { Footer } from "./components/Footer";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer";
 import { Route, Switch, useLocation } from "react-router-dom";
 import variables from "./styles/_base.scss";
 
@@ -30,13 +30,13 @@ const App = () => {
       <div id="main-content">
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.pathname}>
-            <Route exact path="/" component={Home} />
-            <Route path="/contact" component={About} />
-            <Route path="/projects" component={Projects} />
+            {/* <Route exact path="/" component={Home} /> */}
+            {/* <Route path="/contact" component={About} /> */}
+            {/* <Route path="/projects" component={Projects} /> */}
           </Switch>
         </AnimatePresence>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

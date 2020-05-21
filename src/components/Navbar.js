@@ -5,48 +5,29 @@ import { Sidebar } from "./Sidebar";
 import { Link } from "react-router-dom";
 import { NavItem } from "./NavItem";
 
-const sidebarVariants = {
-  open: {
-    clipPath: "circle(1000px at 0 0)"
-    // transition: {
-    //   staggerChildren: 0,
-    //   delayChildren: 0
-    // }
-  },
-  closed: {
-    clipPath: "circle(0px at 0 0)"
-    // transition: {
-    //   staggerChildren: 0,
-    //   delayChildren: 0
-    // }
-  }
-};
-
 export const Navbar = () => {
   const [isOpen, toggleMenu] = useCycle(false, true);
 
+  useEffect(_ => {
+    console.log(isOpen);
+  });
+
   return (
-    <nav>
+    <motion.nav initial={false} animate={isOpen ? "open" : "closed"}>
       <div className="wrapper">
         <Link to="/">
           <img id="brand-logo" src="/images/letterM.png" alt="M" />
         </Link>
 
-        <ul id="navlist">
-          <NavItem location={"/"} innerText={"Home"} />
-          <NavItem location={"/contact"} innerText={"Contact"} />
-          <NavItem location={"/projects"} innerText={"Projects"} />
-        </ul>
+        {/*   <ul id="navlist"> */}
+        {/*     <NavItem location={"/"} innerText={"Home"} /> */}
+        {/*     <NavItem location={"/contact"} innerText={"Contact"} /> */}
+        {/*     <NavItem location={"/projects"} innerText={"Projects"} /> */}
+        {/*   </ul> */}
 
-        <motion.div
-          id="small-screen"
-          initial={false}
-          animate={isOpen ? "open" : "closed"}
-        >
-          <MenuIcon toggle={_ => toggleMenu()} />
-          <motion.Sidebar variants={sidebarVariants} />
-        </motion.div>
+        <MenuIcon toggle={_ => toggleMenu()} />
+        <Sidebar className="sidebar" />
       </div>
-    </nav>
+    </motion.nav>
   );
 };
