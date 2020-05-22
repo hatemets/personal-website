@@ -140,6 +140,11 @@
         max-height: 42px;
       }
 
+      svg {
+        cursor: pointer;
+        border: 1px solid;
+      }
+
       #menu-icon,
       #menu-icon-container {
         max-width: 50px;

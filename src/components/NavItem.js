@@ -4,17 +4,46 @@ import { motion } from "framer";
 
 const variants = {
   open: {
-    opacity: 1
+    transition: {
+      staggerChildren: 0.1
+    }
   },
   closed: {
-    opacity: 0
+    transition: {
+      staggerChildren: 0.1
+    }
   }
 };
 
-export const NavItem = ({ location, innerText }) => {
+const items = {
+  home: {
+    location: "/",
+    text: "Home"
+  },
+  contact: {
+    location: "/contact",
+    text: "Contact"
+  },
+  projects: {
+    location: "/projects",
+    text: "Projects"
+  }
+};
+
+const entries = Object.entries(items);
+
+export const NavItem = () => {
   return (
-    <motion.li variants={variants}>
-      <Link to={location}>{innerText}</Link>
-    </motion.li>
+    <ul>
+      {entries.map(item => {
+        const [name, { location, text }] = item;
+        console.log(items);
+        return (
+          <motion.li>
+            <Link to={location}>{text}</Link>
+          </motion.li>
+        );
+      })}
+    </ul>
   );
 };

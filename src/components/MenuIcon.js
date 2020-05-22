@@ -14,12 +14,12 @@ const Path = props => (
 
 const menuIconVariants = {
   top: {
-    open: { d: "M 5 15 l 40 0" },
-    closed: { d: "M 8 8 l 34 34" }
+    open: { d: "M 5 11 L 35 11" },
+    closed: { d: "M 8 8 L 32 32" }
   },
   bottom: {
-    open: { d: "M 5 35 l 40 0" },
-    closed: { d: "M 8 42 l 34 -34" }
+    open: { d: "M 5 29 L 35 29" },
+    closed: { d: "M 8 32 L 32 8" }
   }
 };
 
@@ -29,16 +29,20 @@ export const MenuIcon = ({ toggle }) => {
   return (
     <svg
       // id="menu-icon-container"
-      width="50"
-      height="50"
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
       onClick={_ => toggle()}
     >
       <Path variants={top} />
 
       <Path
-        d="M 5 25 l 40 0"
-        variants={{ open: { opacity: 1 }, closed: { opacity: 0 } }}
-        transition={{ duration: 0.2 }}
+        d="M 5 20 L 35 20"
+        variants={{
+          open: { transform: "scale(1)" },
+          closed: { transform: "scale(0)" }
+        }}
+        transition={{ duration: 0.1 }}
       />
 
       <Path variants={bottom} />

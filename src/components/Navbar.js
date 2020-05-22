@@ -8,9 +8,9 @@ import { NavItem } from "./NavItem";
 export const Navbar = () => {
   const [isOpen, toggleMenu] = useCycle(false, true);
 
-  useEffect(_ => {
-    console.log(isOpen);
-  });
+  // useEffect(_ => {
+  //   console.log(isOpen);
+  // });
 
   return (
     <motion.nav initial={false} animate={isOpen ? "open" : "closed"}>

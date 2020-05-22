@@ -5,7 +5,7 @@ import { NavItem } from "./NavItem";
 
 const sidebar = {
   open: {
-    clipPath: "circle(1000px at 0px 0px)",
+    clipPath: "circle(2000px at 0px 0px)",
     transition: {
       stiffness: 30,
       type: "spring"
