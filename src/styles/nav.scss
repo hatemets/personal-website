@@ -1,0 +1,90 @@
+nav {
+	display: flex;
+	color: $textColor;
+	z-index: 2;
+	position: fixed;
+	opacity: 1;
+	width: 100vw;
+	height: $navbarHeight;
+	background: $mainColor + bb;
+	transition: background 200ms;
+
+	#brand-logo {
+		max-width: 70px;
+	}
+
+	#menu-icon-container {
+		display: none;
+	}
+
+	.wrapper {
+		display: flex;
+		height: 70%;
+		justify-content: space-between;
+	}
+
+	#navlist {
+		display: flex;
+		width: 40%;
+		min-width: 500px;
+		display: flex;
+		justify-content: space-evenly;
+
+		li {
+			list-style: none;
+			margin: auto 0;
+
+			a {
+				font-size: 1.2rem;
+				border-radius: 6px;
+				padding: 20px;
+				transition: color 200ms;
+
+				&:hover {
+					color: #ffa500;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	nav {
+		#navlist {
+			display: none;
+		}
+
+		.wrapper {
+			display: flex;
+		}
+
+		.container {
+			margin: auto 0;
+			max-width: 45px;
+			max-height: 42px;
+		}
+
+		#menu-icon,
+		#menu-icon-container {
+			display: block;
+			margin: auto 0;
+			fill: #fff;
+			cursor: pointer;
+		}
+
+		ul {
+			margin-top: 1.5rem;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-evenly;
+			height: 270px;
+
+			li {
+			}
+		}
+
+		#menu-icon {
+			border: 1px dashed white;
+		}
+	}
+}
