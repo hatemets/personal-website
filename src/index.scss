@@ -12,12 +12,22 @@
 
 		#main-content {
 			position: relative;
+			padding-bottom: $footerHeight;
+			min-height: 100vh;
+		}
+
+		#App {
+			position: relative;
 		}
 	}
 }
 
 @media screen and (max-width: 700px) {
 	body {
+		#main-content {
+			padding-bottom: 298px; // Needs to be made dynamic
+		}
+
 		#section-one {
 			grid-template: repeat(12, 1fr) / 1fr;
 			max-height: 800px;
@@ -50,10 +60,8 @@
 			}
 		}
 
-		#popup-text-container {
-			#letter {
-				font-size: 3rem;
-			}
+		#letter {
+			font-size: 3rem;
 		}
 	}
 }
@@ -66,12 +74,87 @@
 	}
 }
 
+#x {
+	display: grid;
+	min-height: 200px;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 5px;
+	grid-template-areas:
+		"one two . . . . . ."
+		". . three four five six . .";
+
+	.one {
+		grid-area: one;
+	}
+
+	.two {
+		grid-area: two;
+	}
+
+	.three {
+		grid-area: three;
+	}
+
+	.four {
+		grid-area: four;
+	}
+
+	.five {
+		grid-area: five;
+	}
+
+	.six {
+		grid-area: six;
+	}
+
+	> * {
+		border: 1px solid;
+	}
+}
+
 #popup-text-container {
+	display: inline-grid;
+	grid-gap: 4px;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas:
+		". . . . . . . ."
+		". . M a r k . .";
+
+	> * {
+		border: 1px solid;
+	}
+
+	.1 {
+		grid-area: one;
+	}
+
+	.8 {
+		grid-area: M;
+	}
+
+	.9 {
+		grid-area: a;
+	}
+
+	.10 {
+		grid-area: r;
+	}
+
+	.11 {
+		grid-area: k;
+	}
+
 	color: #fff;
 	font-size: 4rem;
-	display: flex;
+	// display: flex;
 	overflow: hidden;
-	justify-content: center;
+	// justify-content: center;
+
+	> * {
+		// border: 1px solid;
+	}
 
 	#letter {
 		font-family: $popupFont;
@@ -156,6 +239,16 @@ section {
 				padding: 15px;
 				font-size: 1.5rem;
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	body {
+		#popup-text-container {
+			color: white;
+			overflow: visible;
+			word-wrap: break-word;
 		}
 	}
 }

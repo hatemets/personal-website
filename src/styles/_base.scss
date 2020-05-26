@@ -13,69 +13,69 @@ $mainOpacity: bb;
 
 // Exports
 :export {
-  navbarHeight: $navbarHeight;
-  color: $mainColor;
-  opacity: $mainOpacity;
+	navbarHeight: $navbarHeight;
+	color: $mainColor;
+	opacity: $mainOpacity;
 }
 
 // Mixins
 @mixin transform($property) {
-  -webkit-transform: $property;
-  -ms-transform: $property;
-  transform: $property;
+	-webkit-transform: $property;
+	-ms-transform: $property;
+	transform: $property;
 }
 
 // Base styles
 .card {
-  margin: 15px auto;
-  max-width: 1000px;
-  border-radius: 6px;
-  padding: 18px;
-  color: $textColor;
-  background: $mainColor + b2;
+	margin: 15px auto;
+	max-width: 1000px;
+	border-radius: 6px;
+	padding: 18px;
+	color: $textColor;
+	background: $mainColor + b2;
 }
 
 .wrapper {
-  width: 80%;
-  margin: auto;
+	width: 80%;
+	margin: auto;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: $mainFont;
-  line-height: 1.5;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: $mainFont;
+	line-height: 1.5;
 }
 
 .content {
-  text-align: center;
-  line-height: 1.5;
-  position: absolute;
-  top: $navbarHeight;
-  width: 80%;
-  margin: 0 10vw;
+	text-align: center;
+	line-height: 1.5;
+	position: absolute;
+	top: $navbarHeight;
+	width: 80%;
+	margin: 0 10vw;
 }
 
 a {
-  text-decoration: none;
-  color: $textColor;
-  &:visited {
-    color: $textColor;
-  }
+	text-decoration: none;
+	color: $textColor;
+	&:visited {
+		color: $textColor;
+	}
 }
 
 p {
-  font-size: 18px;
+	font-size: 18px;
 }
 
 // Details
 .dark {
-  background: $mainColor;
+	background: $mainColor;
 }
 
 .hidden {
-  display: none !important;
+	display: none !important;
 }
