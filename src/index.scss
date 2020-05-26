@@ -65,7 +65,6 @@
 		}
 	}
 }
-
 @media screen and (max-width: 800px) {
 	body {
 		#section-one {
@@ -74,48 +73,8 @@
 	}
 }
 
-#x {
-	display: grid;
-	min-height: 200px;
-	grid-template-columns: repeat(8, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	grid-gap: 5px;
-	grid-template-areas:
-		"one two . . . . . ."
-		". . three four five six . .";
-
-	.one {
-		grid-area: one;
-	}
-
-	.two {
-		grid-area: two;
-	}
-
-	.three {
-		grid-area: three;
-	}
-
-	.four {
-		grid-area: four;
-	}
-
-	.five {
-		grid-area: five;
-	}
-
-	.six {
-		grid-area: six;
-	}
-
-	> * {
-		border: 1px solid;
-	}
-}
-
 #popup-text-container {
 	display: inline-grid;
-	grid-gap: 4px;
 	grid-template-columns: repeat(8, 1fr);
 	grid-template-rows: repeat(2, 1fr);
 	grid-template-areas:
@@ -123,26 +82,22 @@
 		". . M a r k . .";
 
 	> * {
-		border: 1px solid;
+		// border: 1px solid;
 	}
 
-	.1 {
-		grid-area: one;
-	}
-
-	.8 {
+	.M {
 		grid-area: M;
 	}
 
-	.9 {
+	.a {
 		grid-area: a;
 	}
 
-	.10 {
+	.r {
 		grid-area: r;
 	}
 
-	.11 {
+	.k {
 		grid-area: k;
 	}
 

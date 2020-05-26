@@ -47,7 +47,7 @@ export const Home = () => {
 					<motion.div className="card" id="popup-text-container">
 						{popupString.map((letter, i) => (
 							<motion.div
-								className={i < 8 ? "1" : letter}
+								className={i < 8 ? i : letter}
 								id="letter"
 								custom={i}
 								initial={"before"}
@@ -58,14 +58,6 @@ export const Home = () => {
 							</motion.div>
 						))}
 					</motion.div>
-					<div className="card" id="x">
-						<div className="one">one</div>
-						<div className="two">two</div>
-						<div className="three">three</div>
-						<div className="four">four</div>
-						<div className="five">five</div>
-						<div className="six">six</div>
-					</div>
 					<div className="card">
 						<h1>Thank you for visiting my website!</h1>
 						<p>
