@@ -3,7 +3,6 @@ import { motion, useCycle } from "framer";
 import { MenuIcon } from "./MenuIcon";
 import { Sidebar } from "./Sidebar";
 import { Link } from "react-router-dom";
-import { NavItems } from "./NavItems";
 
 export const Navbar = () => {
 	const [isOpen, toggleMenu] = useCycle(false, true);

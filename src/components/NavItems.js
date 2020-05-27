@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer";
 import { MenuItem } from "./MenuItem";
 
@@ -39,7 +38,7 @@ export const NavItems = ({ toggle }) => {
 	return (
 		<motion.ul variants={variants}>
 			{entries.map(item => {
-				const [name, { location, text }] = item;
+				const { location, text } = item[1];
 				return (
 					<MenuItem onClick={() => toggle()} location={location} text={text} />
 				);

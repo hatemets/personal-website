@@ -88,7 +88,7 @@ export const Home = () => {
 			</div>
 
 			<section id="section-one">
-				<h1>Who am I?</h1>
+				<h1>About me</h1>
 				<p>
 					Who am I, anyway? My name is Mark Heidmets and I'm currently studying
 					at Gustav Adolf Grammar School in Tallinn, Estonia. I have been

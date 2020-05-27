@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer";
-import { menuIconValues } from "../assets/animationProperties";
 
 const Path = props => (
 	<motion.path

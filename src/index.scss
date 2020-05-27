@@ -10,6 +10,17 @@
 	body {
 		overflow-x: hidden;
 
+		#popup-text-container {
+			display: flex;
+			justify-content: center;
+
+			#letter {
+				font-size: 4rem;
+				font-family: $popupFont;
+				font-weight: bold;
+			}
+		}
+
 		#main-content {
 			position: relative;
 			padding-bottom: $footerHeight;
@@ -19,78 +30,6 @@
 		#App {
 			position: relative;
 		}
-	}
-}
-
-@media screen and (max-width: 700px) {
-	body {
-		#main-content {
-			padding-bottom: 298px; // Needs to be made dynamic
-		}
-
-		#section-one {
-			grid-template: repeat(12, 1fr) / 1fr;
-			max-height: 800px;
-
-			grid-template-areas:
-				"title title title title"
-				"title title title title"
-				"title title title title"
-				"text text text text"
-				"text text text text"
-				"text text text text"
-				"text text text text"
-				"text text text text"
-				"image image image image"
-				"image image image image"
-				"image image image image"
-				"image image image image";
-
-			h1 {
-				grid-area: title;
-			}
-
-			p {
-				text-align: justify;
-				grid-area: text;
-			}
-
-			.s3 {
-				grid-area: image;
-			}
-		}
-
-		#letter {
-			font-size: 3rem;
-		}
-	}
-}
-
-@media screen and (max-width: 800px) {
-	body {
-		#section-one {
-			height: 380px;
-		}
-	}
-}
-
-#popup-text-container {
-	display: inline-grid;
-	grid-template-columns: repeat(8, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	grid-template-areas:
-		". . . H i exclm . ."
-		"I comma m . M a r k";
-
-	color: #fff;
-	font-size: 4rem;
-	overflow: hidden;
-
-	#letter {
-		font-family: $popupFont;
-		font-weight: bold;
-		width: auto;
-		position: relative;
 	}
 }
 

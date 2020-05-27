@@ -1,67 +1,100 @@
-#section-one {
-	display: grid;
-	padding: 20px;
-	height: 300px;
-	grid-template: repeat(3, 1fr) / repeat(4, 1fr);
-	grid-gap: 10px;
+body {
+	#section-one {
+		display: grid;
+		padding: 20px;
+		height: 300px;
+		grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+		grid-gap: 10px;
 
-	grid-template-areas:
-		"title title image image"
-		"title title image image"
-		"text text image image";
+		grid-template-areas:
+			"title title image image"
+			"title title image image"
+			"text text image image";
 
-	.s3 {
-		background: lightblue;
-		grid-area: image;
-	}
+		.s3 {
+			background: lightblue;
+			grid-area: image;
+		}
 
-	h1 {
-		grid-area: title;
-		border-bottom: 1px solid;
-		width: 90%;
-		position: relative;
-		margin: auto;
-		padding: 5px;
-		border-width: 1px;
-	}
+		h1 {
+			grid-area: title;
+			border-bottom: 1px solid;
+			width: 90%;
+			position: relative;
+			margin: auto;
+			padding: 5px;
+			border-width: 1px;
+		}
 
-	p {
-		grid-area: text;
-		padding: 5px;
-		font-size: 1.2rem;
+		p {
+			grid-area: text;
+			padding: 5px;
+			font-size: 1.2rem;
+		}
 	}
 }
 
 @media screen and (max-width: 700px) {
-	#section-one {
-		grid-template: repeat(12, 1fr) / 1fr;
-		max-height: 800px;
-
-		grid-template-areas:
-			"title title title title"
-			"title title title title"
-			"title title title title"
-			"text text text text"
-			"text text text text"
-			"text text text text"
-			"text text text text"
-			"text text text text"
-			"image image image image"
-			"image image image image"
-			"image image image image"
-			"image image image image";
-
-		h1 {
-			grid-area: title;
+	body {
+		#main-content {
+			padding-bottom: 298px; // Needs to be made dynamic
 		}
 
-		p {
-			text-align: justify;
-			grid-area: text;
+		#section-one {
+			grid-template-rows: repeat(8, 1fr) 200px;
+			grid-template-columns: auto;
+			height: auto !important;
+			// max-height: 800px;
+
+			grid-template-areas:
+				"title title title title"
+				"title title title title"
+				"title title title title"
+				"text text text text"
+				"text text text text"
+				"text text text text"
+				"text text text text"
+				"text text text text"
+				"image image image image";
+
+			h1 {
+				grid-area: title;
+			}
+
+			p {
+				text-align: justify;
+				grid-area: text;
+			}
+
+			.s3 {
+				grid-area: image;
+			}
 		}
 
-		.s3 {
-			grid-area: image;
+		#letter {
+			font-size: 3rem;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		#popup-text-container {
+			display: inline-grid !important;
+			grid-template-columns: repeat(8, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			grid-template-areas:
+				". . . H i exclm . ."
+				"I comma m . M a r k";
+
+			color: #fff;
+			font-size: 4rem;
+			overflow: hidden;
+
+			#letter {
+				width: auto;
+				position: relative;
+			}
 		}
 	}
 }
