@@ -41,14 +41,7 @@ export const NavItems = ({ toggle }) => {
 			{entries.map(item => {
 				const [name, { location, text }] = item;
 				return (
-					<MenuItem
-						onClick={() => {
-							console.log("hello");
-							toggle();
-						}}
-						location={location}
-						text={text}
-					/>
+					<MenuItem onClick={() => toggle()} location={location} text={text} />
 				);
 			})}
 		</motion.ul>

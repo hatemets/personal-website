@@ -14,13 +14,27 @@ nav {
 	}
 
 	#menu-icon-container {
-		display: none;
+		z-index: 6;
+		display: block;
+		margin: auto 0;
+		fill: #fff;
+		cursor: pointer;
 	}
 
 	.wrapper {
 		display: flex;
 		height: 70%;
 		justify-content: space-between;
+	}
+
+	#sidebar {
+		width: 300px;
+
+		li {
+			a {
+				font-size: 1.6rem !important;
+			}
+		}
 	}
 
 	#navlist {
@@ -64,12 +78,8 @@ nav {
 			max-height: 42px;
 		}
 
-		#menu-icon,
-		#menu-icon-container {
-			display: block;
-			margin: auto 0;
-			fill: #fff;
-			cursor: pointer;
+		#sidebar {
+			width: 100vw;
 		}
 
 		ul {

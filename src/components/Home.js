@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer";
 import { pageAnimation } from "../assets/animationProperties";
 
 export const Home = () => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
-	const popupString = Array.from("Hi, I'm Mark");
+	const string = "Hi! I'm Mark";
+	const popupString = Array.from(string);
+
+	useEffect(() => {
+		const string = "Hi! I'm Mark";
+
+		Array.from(string).forEach(letter => {
+			if (letter !== " ") {
+				const el = document.getElementsByClassName(letter)[0];
+				if (letter === "!") el.style.gridArea = "exclm";
+				else if (letter === "'") el.style.gridArea = "comma";
+
+				if (!el.style.gridArea.includes("/")) {
+					el.style.gridArea = letter;
+				}
+				console.log(el.style.gridArea);
+			}
+		});
+	});
 
 	const variants = {
 		before: {
@@ -47,7 +65,7 @@ export const Home = () => {
 					<motion.div className="card" id="popup-text-container">
 						{popupString.map((letter, i) => (
 							<motion.div
-								className={i < 8 ? i : letter}
+								className={letter}
 								id="letter"
 								custom={i}
 								initial={"before"}

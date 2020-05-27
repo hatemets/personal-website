@@ -32,9 +32,9 @@ export const Navbar = () => {
 					<img id="brand-logo" src="/images/letterM.png" alt="M" />
 				</Link>
 
-				<ul id="navlist">
-					<NavItems location={"/"} innerText={"Home"} />
-				</ul>
+				{/* <ul id="navlist"> */}
+				{/* 	<NavItems location={"/"} innerText={"Home"} /> */}
+				{/* </ul> */}
 
 				<MenuIcon toggle={_ => toggleMenu()} />
 				<Sidebar className="sidebar" toggle={() => toggleMenu()} />

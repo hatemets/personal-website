@@ -7,22 +7,22 @@ const itemVariants = {
 		opacity: 1,
 		y: 0,
 		transition: {
-			ease: "linear"
+			ease: "linear",
+			duration: 0.2
 		}
 	},
 	closed: {
 		opacity: 0,
 		y: 25,
 		transition: {
-			ease: "linear"
+			ease: "linear",
+			duration: 0.2
 		}
 	}
 };
 
-export const MenuItem = ({ location, text }) => {
-	return (
-		<motion.li whileHover={{ x: 15 }} variants={itemVariants}>
-			<Link to={location}>{text}</Link>
-		</motion.li>
-	);
-};
+export const MenuItem = ({ location, text }) => (
+	<motion.li whileHover={{ x: 15 }} variants={itemVariants}>
+		<Link to={location}>{text}</Link>
+	</motion.li>
+);
