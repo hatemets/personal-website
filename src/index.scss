@@ -7,29 +7,28 @@
 
 // Main
 * {
-	body {
-		overflow-x: hidden;
+	overflow-x: hidden;
 
-		#popup-text-container {
-			display: flex;
-			justify-content: center;
+	#popup-text-container {
+		max-width: 80vw;
+		display: flex;
+		justify-content: center;
 
-			#letter {
-				font-size: 4rem;
-				font-family: $popupFont;
-				font-weight: bold;
-			}
+		#letter {
+			font-size: 4rem;
+			font-family: $popupFont;
+			font-weight: bold;
 		}
+	}
 
-		#main-content {
-			position: relative;
-			padding-bottom: $footerHeight;
-			min-height: 100vh;
-		}
+	#main-content {
+		position: relative;
+		padding-bottom: $footerHeight;
+		min-height: 100vh;
+	}
 
-		#App {
-			position: relative;
-		}
+	#App {
+		position: relative;
 	}
 }
 
@@ -97,7 +96,9 @@ section {
 	left: 0;
 
 	ul {
-		margin: 20% 0;
+		margin: 15% 0;
+		min-height: 250px;
+		// border: 1px solid;
 
 		li {
 			list-style-type: none;
@@ -105,6 +106,9 @@ section {
 			padding: 10px 0;
 			margin: 5px auto;
 			text-align: center;
+			// border: 1px solid;
+			min-height: 50px;
+			overflow-y: hidden;
 
 			a {
 				border-radius: 5px;
@@ -116,11 +120,13 @@ section {
 }
 
 @media screen and (max-width: 450px) {
-	body {
-		#popup-text-container {
-			color: white;
-			overflow: visible;
-			word-wrap: break-word;
+	#popup-text-container {
+		color: white;
+		overflow: visible;
+		word-wrap: break-word;
+
+		#letter {
+			font-size: 3rem;
 		}
 	}
 }

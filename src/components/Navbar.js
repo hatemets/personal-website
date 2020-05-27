@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
 	const [isOpen, toggleMenu] = useCycle(false, true);
 	const node = useRef();
+	const footer = document.querySelector("footer");
 
 	const handleClickOutside = e => {
 		if (node.current.contains(e.target)) return;
@@ -14,9 +15,13 @@ export const Navbar = () => {
 	};
 
 	useEffect(() => {
-		if (isOpen) document.addEventListener("mousedown", handleClickOutside);
-		else document.removeEventListener("mousedown", handleClickOutside);
-
+		if (isOpen) {
+			footer.style.zIndex = "-1";
+			document.addEventListener("mousedown", handleClickOutside);
+		} else {
+			document.querySelector("footer").style.zIndex = "1";
+			document.removeEventListener("mousedown", handleClickOutside);
+		}
 		return _ => document.removeEventListener("mousedown", handleClickOutside);
 	}, [isOpen]);
 

@@ -23,9 +23,7 @@ const sidebar = {
 export const Sidebar = ({ toggle }) => {
 	return (
 		<motion.div id="sidebar" variants={sidebar}>
-			<ul>
-				<NavItems toggle={() => toggle()} />
-			</ul>
+			<NavItems toggle={() => toggle()} />
 		</motion.div>
 	);
 };

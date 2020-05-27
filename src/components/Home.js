@@ -38,7 +38,7 @@ export const Home = () => {
 			scale: 1,
 			filter: "blur(0)",
 			transition: {
-				delay: indexList[i] * 0.08,
+				delay: indexList[i] * 0.1,
 				ease: "easeOut"
 			}
 		})

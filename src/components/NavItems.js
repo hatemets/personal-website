@@ -36,7 +36,7 @@ const entries = Object.entries(items);
 
 export const NavItems = ({ toggle }) => {
 	return (
-		<motion.ul variants={variants}>
+		<motion.ul variants={variants} onClick={() => toggle()}>
 			{entries.map(item => {
 				const { location, text } = item[1];
 				return (

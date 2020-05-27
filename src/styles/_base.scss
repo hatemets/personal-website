@@ -40,6 +40,10 @@ $mainOpacity: bb;
 	margin: auto;
 }
 
+.hidden {
+	display: none;
+}
+
 *,
 *::before,
 *::after {
@@ -69,13 +73,4 @@ a {
 
 p {
 	font-size: 18px;
-}
-
-// Details
-.dark {
-	background: $mainColor;
-}
-
-.hidden {
-	display: none !important;
 }
