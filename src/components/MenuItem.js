@@ -22,7 +22,9 @@ const itemVariants = {
 };
 
 export const MenuItem = ({ location, text }) => (
-	<motion.li whileHover={{ x: 15 }} variants={itemVariants}>
-		<Link to={location}>{text}</Link>
+	<motion.li whileHover={{ x: 10 }} variants={itemVariants}>
+		<Link className="menu-item" to={location}>
+			{text}
+		</Link>
 	</motion.li>
 );

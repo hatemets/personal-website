@@ -4,22 +4,11 @@
 @import "styles/footer.scss";
 @import "styles/nav.scss";
 @import "styles/home.scss";
+@import "styles/contact.scss";
 
 // Main
 * {
 	overflow-x: hidden;
-
-	#popup-text-container {
-		max-width: 80vw;
-		display: flex;
-		justify-content: center;
-
-		#letter {
-			font-size: 4rem;
-			font-family: $popupFont;
-			font-weight: bold;
-		}
-	}
 
 	#main-content {
 		position: relative;
@@ -98,7 +87,6 @@ section {
 	ul {
 		margin: 15% 0;
 		min-height: 250px;
-		// border: 1px solid;
 
 		li {
 			list-style-type: none;
@@ -106,7 +94,6 @@ section {
 			padding: 10px 0;
 			margin: 5px auto;
 			text-align: center;
-			// border: 1px solid;
 			min-height: 50px;
 			overflow-y: hidden;
 

@@ -1,14 +1,26 @@
 body {
+	#popup-text-container {
+		overflow: hidden;
+		max-width: 1000px;
+		display: flex;
+		justify-content: center;
+
+		#letter {
+			font-size: 4rem;
+			font-family: $popupFont;
+			font-weight: bold;
+		}
+	}
+
 	#section-one {
 		display: grid;
 		padding: 20px;
-		height: 300px;
 		grid-template: repeat(3, 1fr) / repeat(4, 1fr);
 		grid-gap: 10px;
 
 		grid-template-areas:
 			"title title image image"
-			"title title image image"
+			"text text image image"
 			"text text image image";
 
 		.s3 {
@@ -27,6 +39,7 @@ body {
 		}
 
 		p {
+			overflow: hidden;
 			grid-area: text;
 			padding: 5px;
 			font-size: 1.2rem;

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
 
 // Variables
 $mainFont: "Josefin Sans";
@@ -33,6 +34,12 @@ $mainOpacity: bb;
 	padding: 18px;
 	color: $textColor;
 	background: $mainColor + b2;
+
+	p,
+	li,
+	a {
+		font-size: 1.2rem;
+	}
 }
 
 .wrapper {

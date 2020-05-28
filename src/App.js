@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Home } from "./components/Home";
 import { Navbar } from "./components/Navbar";
 import { Projects } from "./components/Projects";
-import { About } from "./components/About";
+import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { AnimatePresence } from "framer";
 import { Route, Switch, useLocation } from "react-router-dom";
@@ -31,7 +31,7 @@ const App = () => {
 				<AnimatePresence exitBeforeEnter>
 					<Switch location={location} key={location.pathname}>
 						<Route exact path="/" component={Home} />
-						<Route path="/contact" component={About} />
+						<Route path="/contact" component={Contact} />
 						<Route path="/projects" component={Projects} />
 					</Switch>
 				</AnimatePresence>

@@ -15,10 +15,21 @@ nav {
 
 	#menu-icon-container {
 		z-index: 6;
-		display: block;
 		margin: auto 0;
 		fill: #fff;
 		cursor: pointer;
+	}
+
+	.menu-item {
+		transition: 100ms all;
+
+		&:hover {
+			color: orange;
+		}
+	}
+
+	#navlist {
+		display: none;
 	}
 
 	.wrapper {
@@ -30,34 +41,8 @@ nav {
 	#sidebar {
 		width: 300px;
 
-		li {
-			a {
-				font-size: 1.6rem !important;
-			}
-		}
-	}
-
-	#navlist {
-		display: flex;
-		width: 40%;
-		min-width: 500px;
-		display: flex;
-		justify-content: space-evenly;
-
-		li {
-			list-style: none;
-			margin: auto 0;
-
-			a {
-				font-size: 1.2rem;
-				border-radius: 6px;
-				padding: 20px;
-				transition: color 200ms;
-
-				&:hover {
-					color: #ffa500;
-				}
-			}
+		a {
+			font-size: 1.6rem !important;
 		}
 	}
 }
@@ -95,6 +80,39 @@ nav {
 
 		#menu-icon {
 			border: 1px dashed white;
+		}
+	}
+}
+
+@media screen and (min-width: 900px) {
+	#menu-icon-container,
+	#menu-icon {
+		display: none;
+	}
+
+	#navlist {
+		display: flex !important;
+		width: 40%;
+		min-width: 500px;
+		display: flex;
+		justify-content: space-around;
+		// border: 1px solid;
+
+		li {
+			list-style: none;
+			margin: auto 0;
+			overflow: hidden;
+
+			a {
+				font-size: 1.3rem;
+				border-radius: 6px;
+				padding: 20px;
+				transition: color 200ms;
+
+				&:hover {
+					color: #ffa500;
+				}
+			}
 		}
 	}
 }

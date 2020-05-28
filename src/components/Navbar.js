@@ -3,6 +3,7 @@ import { motion, useCycle } from "framer";
 import { MenuIcon } from "./MenuIcon";
 import { Sidebar } from "./Sidebar";
 import { Link } from "react-router-dom";
+import { NavItems } from "./NavItems";
 
 export const Navbar = () => {
 	const [isOpen, toggleMenu] = useCycle(false, true);
@@ -36,9 +37,17 @@ export const Navbar = () => {
 					<img id="brand-logo" src="/images/letterM.png" alt="M" />
 				</Link>
 
-				{/* <ul id="navlist"> */}
-				{/* 	<NavItems location={"/"} innerText={"Home"} /> */}
-				{/* </ul> */}
+				<ul id="navlist">
+					<li>
+						<Link to="/">Home</Link>
+					</li>
+					<li>
+						<Link to="/contact">Contact</Link>
+					</li>
+					<li>
+						<Link to="/projects">Projects</Link>
+					</li>
+				</ul>
 
 				<MenuIcon toggle={_ => toggleMenu()} />
 				<Sidebar className="sidebar" toggle={() => toggleMenu()} />

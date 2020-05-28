@@ -16,10 +16,7 @@ export const Home = () => {
 				if (letter === "!") el.style.gridArea = "exclm";
 				else if (letter === "'") el.style.gridArea = "comma";
 
-				if (!el.style.gridArea.includes("/")) {
-					el.style.gridArea = letter;
-				}
-				console.log(el.style.gridArea);
+				if (!el.style.gridArea.includes("/")) el.style.gridArea = letter;
 			}
 		});
 	});
