@@ -1,15 +1,24 @@
 body {
 	#popup-text-container {
+		padding: 25px 0;
 		overflow: hidden;
 		max-width: 1000px;
 		display: flex;
 		justify-content: center;
+		color: #fff;
+		background: transparent;
 
 		#letter {
+			text-shadow: 0px 0px 8px #000;
 			font-size: 4rem;
 			font-family: $popupFont;
 			font-weight: bold;
 		}
+	}
+
+	.title {
+		font-size: 2.5rem;
+		margin-bottom: 15px;
 	}
 
 	#section-one {
@@ -47,15 +56,24 @@ body {
 		}
 	}
 
-	#image-two {
+	#image-two,
+	#image-three {
 		.card {
-			display: flex;
 			position: relative;
+			display: flex;
 			top: 30%;
-			flex-direction: column;
 
 			h1 {
 				margin: auto;
+			}
+		}
+	}
+
+	#image-two {
+		.card {
+			flex-direction: column;
+
+			h1 {
 				display: block;
 				font-size: 4rem;
 
@@ -64,6 +82,11 @@ body {
 				}
 			}
 		}
+	}
+
+	#image-three {
+		font-size: 1.8rem;
+		text-align: center;
 	}
 }
 
@@ -89,17 +112,9 @@ body {
 				"text text text text"
 				"image image image image";
 
-			h1 {
-				grid-area: title;
-			}
-
 			p {
 				text-align: justify;
 				grid-area: text;
-			}
-
-			.s3 {
-				grid-area: image;
 			}
 		}
 
@@ -107,12 +122,19 @@ body {
 			font-size: 3rem;
 		}
 
-		#image-two {
+		#image-two,
+		#image-three {
 			.card {
 				h1 {
 					margin: auto;
 					font-size: 2.4rem;
 				}
+			}
+		}
+
+		#image-three {
+			h1 {
+				margin: auto;
 			}
 		}
 	}
@@ -128,7 +150,6 @@ body {
 				". . . H i exclm . ."
 				"I comma m . M a r k";
 
-			color: #fff;
 			font-size: 4rem;
 			overflow: hidden;
 
@@ -136,6 +157,14 @@ body {
 				width: auto;
 				position: relative;
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	#home {
+		.component-container {
+			min-height: 130vh !important;
 		}
 	}
 }

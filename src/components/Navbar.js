@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { motion, useCycle } from "framer";
 import { MenuIcon } from "./MenuIcon";
 import { Sidebar } from "./Sidebar";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { NavItems } from "./NavItems";
 
 export const Navbar = () => {
@@ -39,13 +39,19 @@ export const Navbar = () => {
 
 				<ul id="navlist">
 					<li>
-						<Link to="/">Home</Link>
+						<NavLink exact activeClassName="active" to="/">
+							Home
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/contact">Contact</Link>
+						<NavLink activeClassName="active" to="/contact">
+							Contact
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/projects">Projects</Link>
+						<NavLink activeClassName="active" to="/projects">
+							Projects
+						</NavLink>
 					</li>
 				</ul>
 

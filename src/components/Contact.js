@@ -16,7 +16,7 @@ export const Contact = () => {
 				className="content"
 			>
 				<div className="card">
-					<h1>Contact information</h1>
+					<h1 className="title">Contact information</h1>
 					<p>
 						In case you are interested in hiring me or have me build a website
 						for your company, you can contact me via the following mediums:

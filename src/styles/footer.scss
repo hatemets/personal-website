@@ -19,7 +19,6 @@ footer {
 	#facebook {
 		color: #3b5998;
 	}
-
 	#instagram {
 		color: #fb3958;
 	}
@@ -51,5 +50,11 @@ footer {
 				margin: auto 0;
 			}
 		}
+	}
+}
+
+@media screen and (min-width: 1100px) {
+	footer {
+		justify-content: space-around;
 	}
 }

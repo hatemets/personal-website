@@ -7,16 +7,8 @@
 	width: 100vw;
 }
 
-#image-one {
-	background-image: url(/images/trees.jpg);
-
-	.content {
-		display: inline-block;
-	}
-}
-
 #image-two {
-	background-image: url(/images/codingpic.jpg);
+	background-image: url(/images/codingpic2.jpg);
 	position: relative;
 	height: 600px;
 
@@ -31,4 +23,8 @@
 		bottom: 0;
 		top: 0;
 	}
+}
+
+#image-three {
+	background-image: url(/images/workspacepic.jpg);
 }

@@ -16,13 +16,14 @@ export const Projects = () => {
 				className="content"
 			>
 				<div className="card">
-					<h1>Projects</h1>
-					<p>
-						I am passionate about building the website you would love to have.
-						My aim is to be able to provide you with the best possible UI and
-						UX design, through which the site would catch the attention of even
-						the most exorable and demanding customers.
-					</p>
+					<h1 className="title">Projects</h1>
+					<p>I am yet to create the projects.</p>
+				</div>
+				<div className="card">
+					<h1 className="title">Github profile</h1>
+					<a className="link" href="https://www.github.com/hatemets/">
+						My Github profile
+					</a>
 				</div>
 			</motion.div>
 		</div>

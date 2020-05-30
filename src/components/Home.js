@@ -49,8 +49,8 @@ export const Home = () => {
 	}
 
 	return (
-		<motion.div>
-			<div id="home" className="component-container">
+		<motion.div id="home">
+			<div className="component-container">
 				<motion.div
 					initial="initial"
 					animate="in"
@@ -74,7 +74,7 @@ export const Home = () => {
 						))}
 					</motion.div>
 					<div className="card">
-						<h1>I'm pleased to see you here!</h1>
+						<h1 className="title">I'm pleased to see you here!</h1>
 						<p>
 							Hopefully you'll learn more about me and my projects. Find out
 							more about who I am and what I do. You can also take a look at
@@ -106,13 +106,20 @@ export const Home = () => {
 			<section id="section-two">
 				<h1>Get the website you need</h1>
 				<p>
-					It is well known how important user interface and user experience are
-					nowadays. What's more, user experience in the form of animations is
-					also an important factor when it comes to customer satisfaction. It
-					is for these reasons you need a presentable website, which is what I
-					try my best to produce.
+					User interface is of great importance nowadays alongside user
+					experience in the form of smooth animations. It's for these reasons
+					you need a presentable website which is what I strive to produce. My
+					aim is to be able to provide you with the best possible UI and UX
+					design through which the site would catch the attention of even the
+					most exorable and demanding users.
 				</p>
 			</section>
+
+			<div id="image-three" className="image">
+				<div className="card">
+					<h1>Feel free to contact me</h1>
+				</div>
+			</div>
 		</motion.div>
 	);
 };

@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
+
+// Variables
+$mainFont: "Josefin Sans";
+$popupFont: "DM Mono";
+$navbarHeight: 120px;
+$footerHeight: 150px;
+$mainColor: #333333;
+$textColor: #eee;
+$secondaryColor: #ccc;
+$mainOpacity: bb;
+
+// Exports
+:export {
+	navbarHeight: $navbarHeight;
+	color: $mainColor;
+	opacity: $mainOpacity;
+}
