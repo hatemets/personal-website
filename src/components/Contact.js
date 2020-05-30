@@ -6,7 +6,7 @@ export const Contact = () => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 
 	return (
-		<div className="component-container">
+		<div id="contact" className="component-container">
 			<motion.div
 				initial="out"
 				animate="in"

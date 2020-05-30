@@ -3,30 +3,28 @@ import { motion } from "framer";
 import { pageAnimation } from "../assets/animationProperties";
 
 export const Projects = () => {
-  const { variants: pageVariants, transition: pageTransition } = pageAnimation;
+	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 
-  return (
-    <div className="component-container">
-      <motion.div
-        initial="out"
-        animate="in"
-        exit="out"
-        variants={pageVariants}
-        transition={pageTransition}
-        className="content"
-      >
-        <div className="card">
-          <h1>Here are my projects</h1>
-          <p>
-            Velit ut et reprehenderit minim in elit ad. Ut mollit velit officia
-            magna enim do ex id ullamco incididunt anim. Cillum esse esse
-            veniam exercitation velit velit sit ad esse sit magna. Ut ullamco
-            irure ea est aute velit et irure voluptate Lorem ex dolore. Velit
-            nostrud ut nisi excepteur. Do veniam dolor commodo aliqua aliqua
-            excepteur.
-          </p>
-        </div>
-      </motion.div>
-    </div>
-  );
+	return (
+		<div className="component-container">
+			<motion.div
+				initial="out"
+				animate="in"
+				exit="out"
+				variants={pageVariants}
+				transition={pageTransition}
+				className="content"
+			>
+				<div className="card">
+					<h1>Projects</h1>
+					<p>
+						I am passionate about building the website you would love to have.
+						My aim is to be able to provide you with the best possible UI and
+						UX design, through which the site would catch the attention of even
+						the most exorable and demanding customers.
+					</p>
+				</div>
+			</motion.div>
+		</div>
+	);
 };

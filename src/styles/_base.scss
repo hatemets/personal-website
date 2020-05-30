@@ -33,7 +33,8 @@ $mainOpacity: bb;
 	border-radius: 6px;
 	padding: 18px;
 	color: $textColor;
-	background: $mainColor + b2;
+	background: $mainColor + aa;
+	// box-shadow: 0 0 5px 5px $mainColor + b1;
 
 	p,
 	li,

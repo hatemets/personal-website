@@ -50,7 +50,7 @@ export const Home = () => {
 
 	return (
 		<motion.div>
-			<div id="image-one" className="image">
+			<div id="home" className="component-container">
 				<motion.div
 					initial="initial"
 					animate="in"
@@ -74,11 +74,11 @@ export const Home = () => {
 						))}
 					</motion.div>
 					<div className="card">
-						<h1>Thank you for visiting my website!</h1>
+						<h1>I'm pleased to see you here!</h1>
 						<p>
-							Here you can find out more about who I am and what I do. In
-							addition, you can also take a look at some of the projects I've
-							been working on.
+							Hopefully you'll learn more about me and my projects. Find out
+							more about who I am and what I do. You can also take a look at
+							some of the projects I've been working on.
 						</p>
 					</div>
 				</motion.div>
@@ -95,16 +95,22 @@ export const Home = () => {
 				<div className="s3"></div>
 			</section>
 
-			<div id="image-two" className="image"></div>
+			<div id="image-two" className="image">
+				<div className="card">
+					<h1>Landing page </h1>
+					<p />
+					<h1>Just for you</h1>
+				</div>
+			</div>
 
 			<section id="section-two">
-				<h1>Some Cool Text</h1>
+				<h1>Get the website you need</h1>
 				<p>
-					Irure nisi esse aliqua dolore culpa esse non incididunt sunt ipsum.
-					Sit eiusmod minim do nisi ut occaecat mollit sint amet ea. Do aliqua
-					reprehenderit cupidatat ullamco ipsum. Id anim ipsum voluptate ipsum
-					proident cupidatat dolor do ullamco. Nisi commodo deserunt Lorem
-					Lorem magna esse nostrud irure.
+					It is well known how important user interface and user experience are
+					nowadays. What's more, user experience in the form of animations is
+					also an important factor when it comes to customer satisfaction. It
+					is for these reasons you need a presentable website, which is what I
+					try my best to produce.
 				</p>
 			</section>
 		</motion.div>

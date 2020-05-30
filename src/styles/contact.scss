@@ -1,29 +1,41 @@
-#medium-list {
-	display: flex;
-	justify-content: center;
+#contact {
+	#medium-list {
+		display: flex;
+		justify-content: center;
 
-	li {
-		border: 1px solid;
-		margin: 15px;
-		padding: 6px 10px;
-		border-radius: 2px;
-		cursor: pointer;
+		li {
+			border: 1px solid;
+			margin: 15px;
+			padding: 6px 10px;
+			border-radius: 2px;
+			cursor: pointer;
 
-		&.facebook {
-			background: #3b5998;
-			// border: 1px #3b5998 solid;
+			&.facebook {
+				background: #3b5998;
+				// border: 1px #3b5998 solid;
+			}
+
+			&.email {
+				color: #000;
+				background-color: #ccc;
+				border: 1px #fff solid;
+			}
+
+			&.discord {
+				background-color: #555;
+				// border: 1px #7289da solid;
+				color: #fff;
+			}
 		}
+	}
+}
 
-		&.email {
-			color: #000;
-			background-color: #ccc;
-			border: 1px #fff solid;
-		}
+@media screen and (max-width: 700px) {
+	#contact {
+		min-height: 150vh !important;
 
-		&.discord {
-			background-color: #555;
-			// border: 1px #7289da solid;
-			color: #fff;
+		#medium-list {
+			flex-flow: column;
 		}
 	}
 }
