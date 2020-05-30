@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { motion } from "framer";
 
 const itemVariants = {
@@ -23,8 +23,8 @@ const itemVariants = {
 
 export const MenuItem = ({ location, text }) => (
 	<motion.li whileHover={{ x: 10 }} variants={itemVariants}>
-		<Link className="menu-item" to={location}>
+		<NavLink exact className="menu-item" to={location}>
 			{text}
-		</Link>
+		</NavLink>
 	</motion.li>
 );

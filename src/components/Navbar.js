@@ -3,7 +3,7 @@ import { motion, useCycle } from "framer";
 import { MenuIcon } from "./MenuIcon";
 import { Sidebar } from "./Sidebar";
 import { NavLink, Link } from "react-router-dom";
-import { NavItems } from "./NavItems";
+// import { NavItems } from "./NavItems";
 
 export const Navbar = () => {
 	const [isOpen, toggleMenu] = useCycle(false, true);
@@ -24,7 +24,7 @@ export const Navbar = () => {
 			document.removeEventListener("mousedown", handleClickOutside);
 		}
 		return _ => document.removeEventListener("mousedown", handleClickOutside);
-	}, [isOpen]);
+	});
 
 	return (
 		<motion.nav
