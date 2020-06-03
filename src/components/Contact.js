@@ -18,8 +18,8 @@ export const Contact = () => {
 				<div className="card">
 					<h1 className="title">Contact information</h1>
 					<p>
-						In case you are interested in hiring me or have me build a website
-						for your company, you can contact me via the following mediums:
+						In case you are interested in hiring me or have me build a website for your company, you
+						can contact me via the following mediums:
 					</p>
 					<ul id="medium-list">
 						<li className="email">Email</li>
@@ -27,10 +27,16 @@ export const Contact = () => {
 						<li className="discord">Discord</li>
 					</ul>
 					<p>
-						Pricing and other details will be discussed during further
-						conversations. It is worth mentioning that since I'm a student, I
-						can only work remotely.
+						Pricing and other details will be discussed during further conversations. It is worth
+						mentioning that since I'm a student, I can only work remotely.
 					</p>
+				</div>
+				<div className="card">
+					<h1 className="title">Projects</h1>
+					<p>Check out my github page to see what I've been doing</p>
+					<a className="link" href="https://github.com/hatemets">
+						Click here to visit my github account
+					</a>
 				</div>
 			</motion.div>
 		</div>

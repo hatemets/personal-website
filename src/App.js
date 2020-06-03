@@ -19,8 +19,7 @@ const App = () => {
 		document.addEventListener("scroll", () => {
 			const content = document.querySelector(".card");
 			const rect = content.getBoundingClientRect();
-			navigationBar.style.background =
-				rect.y < navigationBarHeight ? color : color + opacity;
+			navigationBar.style.background = rect.y < navigationBarHeight ? color : color + opacity;
 		});
 	});
 

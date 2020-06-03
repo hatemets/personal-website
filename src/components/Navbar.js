@@ -3,20 +3,19 @@ import { motion, useCycle } from "framer";
 import { MenuIcon } from "./MenuIcon";
 import { Sidebar } from "./Sidebar";
 import { NavLink, Link } from "react-router-dom";
-// import { NavItems } from "./NavItems";
 
 export const Navbar = () => {
 	const [isOpen, toggleMenu] = useCycle(false, true);
 	const node = useRef();
-	const footer = document.querySelector("footer");
-
-	const handleClickOutside = e => {
-		if (node.current.contains(e.target)) return;
-		else toggleMenu();
-	};
 
 	useEffect(() => {
+		const handleClickOutside = e => {
+			if (node.current.contains(e.target)) return;
+			else toggleMenu();
+		};
+
 		if (isOpen) {
+			const footer = document.querySelector("footer");
 			footer.style.zIndex = "-1";
 			document.addEventListener("mousedown", handleClickOutside);
 		} else {
@@ -24,14 +23,10 @@ export const Navbar = () => {
 			document.removeEventListener("mousedown", handleClickOutside);
 		}
 		return _ => document.removeEventListener("mousedown", handleClickOutside);
-	});
+	}, [isOpen]);
 
 	return (
-		<motion.nav
-			ref={node}
-			initial={false}
-			animate={isOpen ? "open" : "closed"}
-		>
+		<motion.nav ref={node} initial={false} animate={isOpen ? "open" : "closed"}>
 			<div className="wrapper">
 				<Link to="/">
 					<img id="brand-logo" src="/images/letterM.png" alt="M" />

@@ -17,12 +17,9 @@ export const Projects = () => {
 			>
 				<div className="card">
 					<h1 className="title">Projects</h1>
-					<p>I am yet to create the projects.</p>
-				</div>
-				<div className="card">
-					<h1 className="title">Github profile</h1>
-					<a className="link" href="https://www.github.com/hatemets/">
-						My Github profile
+					<p>Check out my github page to see what I've been doing</p>
+					<a className="link" href="https://github.com/hatemets">
+						Click here to visit my github account
 					</a>
 				</div>
 			</motion.div>
