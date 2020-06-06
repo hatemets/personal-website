@@ -76,21 +76,23 @@ export const Home = () => {
 					<div className="card">
 						<h1 className="title">I'm pleased to see you here!</h1>
 						<p>
-							Hopefully you'll learn more about me and my projects. Find out
-							more about who I am and what I do. You can also take a look at
-							some of the projects I've been working on.
+							Hopefully you'll learn more about me and my doings. You can also take a look at some
+							of the projects I've been working on.
 						</p>
 					</div>
 				</motion.div>
+
+				<div id="arrow">
+					<svg></svg>
+				</div>
 			</div>
 
 			<section id="section-one">
 				<h1>About me</h1>
 				<p>
-					Who am I, anyway? My name is Mark Heidmets and I'm currently studying
-					at Gustav Adolf Grammar School in Tallinn, Estonia. I have been
-					programming for approximately two years, focusing mainly on web
-					design and browser automation.
+					Who am I, anyway? My name is Mark Heidmets and I'm currently studying at Gustav Adolf
+					Grammar School in Tallinn, Estonia. I have been programming for approximately three years,
+					focusing mainly on web design and browser automation.
 				</p>
 				<div className="s3"></div>
 			</section>
@@ -106,12 +108,11 @@ export const Home = () => {
 			<section id="section-two">
 				<h1>Get the website you need</h1>
 				<p>
-					User interface is of great importance nowadays alongside user
-					experience in the form of smooth animations. It's for these reasons
-					you need a presentable website which is what I strive to produce. My
-					aim is to be able to provide you with the best possible UI and UX
-					design through which the site would catch the attention of even the
-					most exorable and demanding users.
+					User interface is of great importance nowadays alongside user experience in the form of
+					smooth animations. It's for these reasons you need a presentable website which is what I
+					strive to produce. My aim is to be able to provide you with the best possible UI and UX
+					design through which the site would catch the attention of even the most exorable and
+					demanding users.
 				</p>
 			</section>
 

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Home } from "./components/Home";
 import { Navbar } from "./components/Navbar";
-import { Projects } from "./components/Projects";
+import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { AnimatePresence } from "framer";
@@ -31,7 +31,7 @@ const App = () => {
 					<Switch location={location} key={location.pathname}>
 						<Route exact path="/" component={Home} />
 						<Route path="/contact" component={Contact} />
-						<Route path="/projects" component={Projects} />
+						<Route path="/about" component={About} />
 					</Switch>
 				</AnimatePresence>
 			</div>

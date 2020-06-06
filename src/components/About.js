@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer";
 import { pageAnimation } from "../assets/animationProperties";
 
-export const Contact = () => {
+export const About = () => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 
 	return (
@@ -16,20 +16,19 @@ export const Contact = () => {
 				className="content"
 			>
 				<div className="card">
-					<h1>Contact information</h1>
+					<h1 className="title">About me</h1>
+					<h3 className="subtitle">A more detailed introduction</h3>
 					<p>
-						In case you are interested in hiring me or have me build a website
-						for your company, you can contact me via the following mediums:
+						My name is Mark Heidmets and I'm a student from Gustav Adolf Grammar School. I have been
+						learning coding for about 3 years, specializing in web design and browser automation. I
+						am passionate about learning new technologies and concepts every day.
 					</p>
-					<ul id="medium-list">
-						<li className="email">Email</li>
-						<li className="facebook">Facebook</li>
-						<li className="discord">Discord</li>
-					</ul>
+					<br className="break" />
 					<p>
-						Pricing and other details will be discussed during further
-						conversations. It is worth mentioning that since I'm a student, I
-						can only work remotely.
+						Outside school and programming, I do track. Sprinting, which is the main event I compete
+						in, has played a huge role in my life, either by improving my discipline, gaining new
+						relations or making me more resilient. I look forward to continuing with track in
+						college as well for it is an activity that I've been doing for over 7 years by now.
 					</p>
 				</div>
 			</motion.div>

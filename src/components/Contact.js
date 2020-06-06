@@ -18,8 +18,8 @@ export const Contact = () => {
 				<div className="card">
 					<h1 className="title">Contact information</h1>
 					<p>
-						In case you are interested in hiring me or have me build a website for your company, you
-						can contact me via the following mediums:
+						In case you are interested in hiring me, have me build a website for your company or for
+						some other reason, you can contact me via the following mediums:
 					</p>
 					<ul id="medium-list">
 						<li className="email">Email</li>

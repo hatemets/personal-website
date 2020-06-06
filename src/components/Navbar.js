@@ -44,8 +44,8 @@ export const Navbar = () => {
 						</NavLink>
 					</li>
 					<li>
-						<NavLink activeClassName="active" to="/projects">
-							Projects
+						<NavLink activeClassName="active" to="/about">
+							About me
 						</NavLink>
 					</li>
 				</ul>
