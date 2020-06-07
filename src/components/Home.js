@@ -94,7 +94,9 @@ export const Home = () => {
 					Grammar School in Tallinn, Estonia. I have been programming for approximately three years,
 					focusing mainly on web design and browser automation.
 				</p>
-				<div className="s3"></div>
+				<div className="s3">
+					<div id="img"></div>
+				</div>
 			</section>
 
 			<div id="image-two" className="image">

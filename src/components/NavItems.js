@@ -27,8 +27,8 @@ const items = {
 		text: "Contact"
 	},
 	projects: {
-		location: "/projects",
-		text: "Projects"
+		location: "/about",
+		text: "About"
 	}
 };
 
@@ -39,9 +39,7 @@ export const NavItems = ({ toggle }) => {
 		<motion.ul variants={variants} onClick={() => toggle()}>
 			{entries.map(item => {
 				const { location, text } = item[1];
-				return (
-					<MenuItem onClick={() => toggle()} location={location} text={text} />
-				);
+				return <MenuItem onClick={() => toggle()} location={location} text={text} />;
 			})}
 		</motion.ul>
 	);
