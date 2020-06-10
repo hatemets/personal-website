@@ -1,0 +1,96 @@
+#about-container {
+	min-height: 300px;
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: auto 40%;
+	grid-template-rows:
+		minmax(40px, auto) repeat(2, auto) minmax(40px, auto)
+		repeat(2, auto);
+	grid-template-areas:
+		"t1 image"
+		"p1 image"
+		"p1 image"
+		". image"
+		"t2 image"
+		"p2 image"
+		"p2 image";
+
+	> * {
+		// border: 1px solid;
+	}
+
+	#image {
+		min-height: 200px;
+		background: linear-gradient(#321, #395);
+	}
+
+	#t2,
+	#t1 {
+		margin: auto 0;
+	}
+}
+
+#medium-list {
+	display: flex;
+	justify-content: center;
+	background: #222222bb;
+	box-shadow: 0px 0px 5px 5px #222222bb;
+	border-radius: 10px;
+	width: 80%;
+	padding: 25px;
+	margin: 25px auto;
+
+	li {
+		border: 1px solid;
+		margin: 15px;
+		padding: 6px 10px;
+		border-radius: 2px;
+		cursor: pointer;
+
+		&.facebook {
+			background: #3b5998;
+			// border: 1px #3b5998 solid;
+		}
+
+		&.email {
+			color: #000;
+			background-color: #ccc;
+			border: 1px #fff solid;
+		}
+
+		&.discord {
+			background-color: #555;
+			// border: 1px #7289da solid;
+			color: #fff;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#about {
+		min-height: 150vh !important;
+
+		#medium-list {
+			flex-direction: column;
+			width: 70%;
+
+			li {
+				width: 100%;
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	#about-container {
+		grid-template-areas:
+			"t1 t1"
+			"p1 p1"
+			"p1 p1"
+			"image image"
+			"t2 t2"
+			"p2 p2"
+			"p2 p2";
+	}
+}

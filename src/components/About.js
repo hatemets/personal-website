@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer";
 import { pageAnimation } from "../assets/animationProperties";
 
 export const About = () => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 
+	useEffect(() => {
+		const x = document.querySelector("#about-container").children;
+		for (const el of x) el.style.gridArea = el.id;
+	});
+
 	return (
-		<div className="component-container">
+		<div id="about" className="component-container">
 			<motion.div
 				initial="out"
 				animate="in"
@@ -15,16 +20,23 @@ export const About = () => {
 				transition={pageTransition}
 				className="content"
 			>
-				<div className="card">
-					<h1 className="title">About me</h1>
-					<h3 className="subtitle">A more detailed introduction</h3>
-					<p>
+				<div id="about-container" className="card">
+					<h1 id="t1" className="title">
+						About me
+						<h3 className="subtitle">A more detailed introduction</h3>
+					</h1>
+					<p id="p1">
 						My name is Mark Heidmets and I'm a student from Gustav Adolf Grammar School. I have been
 						learning coding for about 3 years, specializing in web design and browser automation. I
 						am passionate about learning new technologies and concepts every day.
 					</p>
 					<br className="break" />
-					<p>
+					<div id="image"></div>
+
+					<h1 id="t2" className="title">
+						Track & Field
+					</h1>
+					<p id="p2">
 						Outside school and programming, I do track. Sprinting, which is the main event I compete
 						in, has played a huge role in my life, either by improving my discipline, gaining new
 						relations or making me more resilient. I look forward to continuing with track in
