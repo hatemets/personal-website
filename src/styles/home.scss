@@ -1,3 +1,5 @@
+@import "./_variables.scss";
+
 body {
 	#popup-text-container {
 		padding: 25px 0;
@@ -98,6 +100,55 @@ body {
 	#image-three {
 		font-size: 1.8rem;
 		text-align: center;
+	}
+
+	#arrow {
+		position: relative;
+		overflow: hidden;
+		border: 1px solid white;
+		min-height: 500px;
+
+		#a1,
+		#a2 {
+			position: absolute;
+			left: 50%;
+			margin-left: calc(-0.5 * #{$arrowWidth});
+		}
+
+		#a1 {
+		}
+
+		#a2 {
+			animation: a2 1500ms infinite;
+		}
+
+		svg {
+			overflow: hidden;
+			animation: a1 1500ms infinite;
+		}
+	}
+
+	@keyframes a1 {
+		from {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		20% {
+			opacity: 0.3;
+		}
+		to {
+			opacity: 0;
+			transform: translateY(50px);
+		}
+	}
+
+	@keyframes a2 {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 }
 

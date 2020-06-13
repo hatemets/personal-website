@@ -7,15 +7,6 @@
 @import "styles/home.scss";
 @import "styles/about.scss";
 
-#arrow {
-	border: 1px solid #fff;
-	z-index: 100;
-	svg {
-		border: 1px yellow solid;
-		fill: #fff;
-	}
-}
-
 // Main
 * {
 	overflow-x: hidden;

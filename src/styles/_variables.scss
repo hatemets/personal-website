@@ -11,10 +11,12 @@ $mainColor: #333333;
 $textColor: #eee;
 $secondaryColor: #ccc;
 $mainOpacity: bb;
+$arrowWidth: 350px;
 
 // Exports
 :export {
 	navbarHeight: $navbarHeight;
 	color: $mainColor;
 	opacity: $mainOpacity;
+	arrowWidth: $arrowWidth;
 }

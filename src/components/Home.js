@@ -1,13 +1,25 @@
 import React, { useEffect } from "react";
 import { motion } from "framer";
 import { pageAnimation } from "../assets/animationProperties";
+import { arrowWidth } from "../styles/_variables.scss";
+
+const Arrow = ({ id }) => (
+	<motion.svg id={id} width={Number(arrowWidth.slice(0, -2))} height="450" viewBox="0 0 350 450">
+		<path
+			d="M 130 20 l 100 0 l 0 250 l 100 0 l -150 170 l -150 -170 l 100 0 l 0 -250"
+			fill="white"
+			stroke="white"
+			stroke-width="1"
+		></path>
+	</motion.svg>
+);
 
 export const Home = () => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 	const string = "Hi! I'm Mark";
 	const popupString = Array.from(string);
 
-	useEffect(() => {
+	useEffect(_ => {
 		const string = "Hi! I'm Mark";
 
 		Array.from(string).forEach(letter => {
@@ -82,14 +94,8 @@ export const Home = () => {
 					</div>
 
 					<div id="arrow">
-						<svg width="350" height="450" viewBox="0 0 350 450">
-							<path
-								d="M 130 20 l 100 0 l 0 250 l 100 0 l -150 150 l -150 -150 l 100 0 l 0 -250"
-								fill="white"
-								stroke="white"
-								stroke-width="1"
-							></path>
-						</svg>
+						<Arrow id="a1" />
+						<Arrow id="a2" />
 					</div>
 				</motion.div>
 			</div>
