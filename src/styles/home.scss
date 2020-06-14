@@ -105,7 +105,6 @@ body {
 	#arrow {
 		position: relative;
 		overflow: hidden;
-		border: 1px solid white;
 		min-height: 500px;
 
 		#a1,
@@ -115,30 +114,27 @@ body {
 			margin-left: calc(-0.5 * #{$arrowWidth});
 		}
 
-		#a1 {
-		}
-
 		#a2 {
-			animation: a2 1500ms infinite;
+			animation: a2 1200ms infinite;
 		}
 
 		svg {
 			overflow: hidden;
-			animation: a1 1500ms infinite;
+			animation: a1 1200ms infinite;
 		}
 	}
 
 	@keyframes a1 {
 		from {
 			opacity: 1;
-			transform: translateY(0);
+			transform: translatey(0);
 		}
 		20% {
-			opacity: 0.3;
+			opacity: 0.1;
 		}
 		to {
 			opacity: 0;
-			transform: translateY(50px);
+			transform: translatey(50px);
 		}
 	}
 
@@ -155,13 +151,12 @@ body {
 @media screen and (max-width: 700px) {
 	body {
 		#main-content {
-			padding-bottom: 297px; // Needs to be made dynamic
+			padding-bottom: 297px; // needs to be made dynamic
 		}
 
 		#section-one {
 			grid-template-rows: repeat(8, 1fr) minmax(450px, auto);
 			grid-template-columns: auto minmax(400px, auto);
-			// height: auto !important;
 
 			grid-template-areas:
 				"title title title title"
@@ -202,6 +197,12 @@ body {
 	}
 }
 
+@media screen and (max-width: 1000px) {
+	#arrow {
+		display: none;
+	}
+}
+
 @media screen and (max-width: 800px) {
 	body {
 		#popup-text-container {
@@ -209,8 +210,8 @@ body {
 			grid-template-columns: repeat(8, 1fr);
 			grid-template-rows: repeat(2, 1fr);
 			grid-template-areas:
-				". . . H i exclm . ."
-				"I comma m . M a r k";
+				". . . h i exclm . ."
+				"i comma m . m a r k";
 
 			font-size: 4rem;
 			overflow: hidden;
@@ -218,6 +219,12 @@ body {
 			#letter {
 				width: auto;
 				position: relative;
+			}
+		}
+
+		#home {
+			.component-container {
+				min-height: 230vh !important;
 			}
 		}
 	}

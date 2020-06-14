@@ -4,14 +4,14 @@ import { pageAnimation } from "../assets/animationProperties";
 import { arrowWidth } from "../styles/_variables.scss";
 
 const Arrow = ({ id }) => (
-	<motion.svg id={id} width={Number(arrowWidth.slice(0, -2))} height="450" viewBox="0 0 350 450">
+	<svg id={id} className="arrow" width={arrowWidth.slice(0, -2)} height="450" viewBox="0 0 350 450">
 		<path
 			d="M 130 20 l 100 0 l 0 250 l 100 0 l -150 170 l -150 -170 l 100 0 l 0 -250"
 			fill="white"
 			stroke="white"
 			stroke-width="1"
 		></path>
-	</motion.svg>
+	</svg>
 );
 
 export const Home = () => {
@@ -20,15 +20,14 @@ export const Home = () => {
 	const popupString = Array.from(string);
 
 	useEffect(_ => {
-		const string = "Hi! I'm Mark";
-
-		Array.from(string).forEach(letter => {
+		popupString.forEach(letter => {
 			if (letter !== " ") {
 				const el = document.getElementsByClassName(letter)[0];
 				if (letter === "!") el.style.gridArea = "exclm";
 				else if (letter === "'") el.style.gridArea = "comma";
+				else el.style.gridArea = letter.toLowerCase();
 
-				if (!el.style.gridArea.includes("/")) el.style.gridArea = letter;
+				if (el.style.gridArea.includes("/") === false) el.style.gridArea = letter;
 			}
 		});
 	});
