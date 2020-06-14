@@ -6,8 +6,8 @@ export const About = () => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 
 	useEffect(() => {
-		const x = document.querySelector("#about-container").children;
-		for (const el of x) el.style.gridArea = el.id;
+		const gridItems = document.querySelector("#about-container").children;
+		for (const el of gridItems) el.style.gridArea = el.id;
 	});
 
 	return (

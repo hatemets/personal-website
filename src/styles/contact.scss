@@ -1,0 +1,82 @@
+// main
+#contact {
+	p {
+		max-width: 90%;
+		margin: auto;
+	}
+
+	#medium-list {
+		display: flex;
+		justify-content: center;
+		width: 80%;
+		margin: 25px auto;
+
+		li {
+			border: 1px solid;
+			margin: 15px;
+			padding: 6px 10px;
+			border-radius: 2px;
+			min-width: 20%;
+			cursor: pointer;
+
+			&.facebook {
+				background: #3b5998;
+				// border: 1px #3b5998 solid;
+			}
+
+			&.email {
+				color: #000;
+				background-color: #ccc;
+				border: 1px #fff solid;
+			}
+
+			&.discord {
+				background-color: #555;
+				// border: 1px #7289da solid;
+				color: #fff;
+			}
+		}
+	}
+}
+
+// medium
+@media screen and (max-width: 800px) {
+	#contact {
+		#medium-list {
+			flex-flow: column wrap;
+			width: 100%;
+			align-items: center;
+
+			li {
+				width: 60%;
+			}
+		}
+
+		.component-container {
+			min-height: 130vh;
+		}
+	}
+}
+
+// small
+@media screen and (max-width: 450px) {
+	#contact {
+		&.component-container {
+			min-height: 200vh;
+		}
+
+		#medium-list {
+			li {
+				width: 70%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 350px) {
+	#contact {
+		&.component-container {
+			min-height: 240vh;
+		}
+	}
+}

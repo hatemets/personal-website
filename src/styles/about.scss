@@ -1,3 +1,4 @@
+// main
 #about-container {
 	min-height: 300px;
 	display: grid;
@@ -15,10 +16,6 @@
 		"p2 image"
 		"p2 image";
 
-	> * {
-		// border: 1px solid;
-	}
-
 	#image {
 		min-height: 200px;
 		background: linear-gradient(#321, #395);
@@ -28,57 +25,15 @@
 	#t1 {
 		margin: auto 0;
 	}
-}
 
-#medium-list {
-	display: flex;
-	justify-content: center;
-	background: #222222bb;
-	box-shadow: 0px 0px 5px 5px #222222bb;
-	border-radius: 10px;
-	width: 80%;
-	padding: 25px;
-	margin: 25px auto;
-
-	li {
-		border: 1px solid;
-		margin: 15px;
-		padding: 6px 10px;
-		border-radius: 2px;
-		cursor: pointer;
-
-		&.facebook {
-			background: #3b5998;
-			// border: 1px #3b5998 solid;
-		}
-
-		&.email {
-			color: #000;
-			background-color: #ccc;
-			border: 1px #fff solid;
-		}
-
-		&.discord {
-			background-color: #555;
-			// border: 1px #7289da solid;
-			color: #fff;
-		}
+	#p1,
+	#p2 {
+		max-width: 95%;
+		margin: 15px auto;
 	}
-}
 
-@media screen and (max-width: 700px) {
-	#about {
-		min-height: 150vh !important;
-
-		#medium-list {
-			flex-direction: column;
-			width: 70%;
-
-			li {
-				width: 100%;
-				margin-left: auto;
-			}
-		}
+	#image {
+		margin-bottom: 25px;
 	}
 }
 
@@ -92,5 +47,19 @@
 			"t2 t2"
 			"p2 p2"
 			"p2 p2";
+	}
+}
+
+// medium
+@media screen and (max-width: 800px) {
+	#about {
+		min-height: 150vh !important;
+	}
+}
+
+// small
+@media screen and (max-width: 450px) {
+	#about {
+		min-height: 210vh !important;
 	}
 }

@@ -6,6 +6,7 @@
 @import "styles/nav.scss";
 @import "styles/home.scss";
 @import "styles/about.scss";
+@import "styles/contact.scss";
 
 // Main
 * {
@@ -28,7 +29,7 @@
 	width: 100vw;
 	height: 100vh;
 	background-attachment: fixed;
-	background-image: url(/images/treesblur2.jpg);
+	background-image: url(/images/treesblur2.jpg) !important;
 }
 
 #about {

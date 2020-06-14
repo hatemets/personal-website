@@ -1,6 +1,12 @@
 @import "./_variables.scss";
 
 body {
+	#home {
+		.component-container {
+			min-height: 110vh;
+		}
+	}
+
 	#popup-text-container {
 		padding: 25px 0;
 		overflow: hidden;
@@ -197,35 +203,27 @@ body {
 	}
 }
 
-@media screen and (max-width: 1000px) {
-	#arrow {
-		display: none;
-	}
-}
-
 @media screen and (max-width: 800px) {
-	body {
-		#popup-text-container {
-			display: inline-grid !important;
-			grid-template-columns: repeat(8, 1fr);
-			grid-template-rows: repeat(2, 1fr);
-			grid-template-areas:
-				". . . h i exclm . ."
-				"i comma m . m a r k";
+	#popup-text-container {
+		display: inline-grid !important;
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-areas:
+			". . . H i exclm . ."
+			"I comma m . M a r k";
 
-			font-size: 4rem;
-			overflow: hidden;
+		font-size: 4rem;
+		overflow: hidden;
 
-			#letter {
-				width: auto;
-				position: relative;
-			}
+		#letter {
+			width: auto;
+			position: relative;
 		}
+	}
 
-		#home {
-			.component-container {
-				min-height: 230vh !important;
-			}
+	#home {
+		.component-container {
+			min-height: 130vh !important;
 		}
 	}
 }
@@ -235,9 +233,7 @@ body {
 		grid-template-columns: auto minmax(260px, auto) !important;
 	}
 
-	#home {
-		.component-container {
-			min-height: 150vh !important;
-		}
+	#arrow {
+		display: none;
 	}
 }

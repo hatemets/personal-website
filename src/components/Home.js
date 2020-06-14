@@ -25,9 +25,8 @@ export const Home = () => {
 				const el = document.getElementsByClassName(letter)[0];
 				if (letter === "!") el.style.gridArea = "exclm";
 				else if (letter === "'") el.style.gridArea = "comma";
-				else el.style.gridArea = letter.toLowerCase();
 
-				if (el.style.gridArea.includes("/") === false) el.style.gridArea = letter;
+				if (!el.style.gridArea.includes("/")) el.style.gridArea = letter;
 			}
 		});
 	});
