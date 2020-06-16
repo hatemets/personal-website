@@ -124,8 +124,7 @@ export const Home = () => {
 					User interface is of great importance nowadays alongside user experience in the form of
 					smooth animations. It's for these reasons you need a presentable website which is what I
 					strive to produce. My aim is to be able to provide you with the best possible UI and UX
-					design through which the site would catch the attention of even the most exorable and
-					demanding users.
+					design through which the site would catch the attention of even the most demanding users.
 				</p>
 			</section>
 

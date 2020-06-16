@@ -49,7 +49,7 @@ body {
 			#img {
 				width: 100%;
 				height: 100%;
-				background-image: url(/images/markportrait.jpg);
+				background-image: url(/images/markportrait-min.jpg);
 				background-size: cover;
 				background-position: center;
 				min-height: 400px;
@@ -72,6 +72,18 @@ body {
 			grid-area: text;
 			padding: 5px;
 			font-size: 1.2rem;
+		}
+	}
+
+	#section-two {
+		padding: 65px 25px;
+
+		> * {
+			text-align: center;
+		}
+
+		h1 {
+			padding-bottom: 15px;
 		}
 	}
 
@@ -178,6 +190,12 @@ body {
 			p {
 				text-align: justify;
 				grid-area: text;
+			}
+		}
+
+		#section-two {
+			p {
+				text-align: justify;
 			}
 		}
 

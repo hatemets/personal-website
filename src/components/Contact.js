@@ -28,7 +28,7 @@ export const Contact = () => {
 					</ul>
 					<p>
 						Pricing and other details will be discussed during further conversations. It is worth
-						mentioning that since I'm a student, I can only work remotely.
+						mentioning that since I'm a student, I can only work remotely or work part-time.
 					</p>
 				</div>
 				<div className="card">
