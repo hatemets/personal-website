@@ -29,6 +29,15 @@ export const Home = () => {
 				if (!el.style.gridArea.includes("/")) el.style.gridArea = letter;
 			}
 		});
+
+		const arrow = document.querySelector("#arrow");
+		const section = document.querySelector("#section-one");
+
+		document.addEventListener("scroll", _ => {
+			const relativeHeight = document.querySelector("#section-one").getBoundingClientRect().y;
+			if (relativeHeight < window.innerHeight) arrow.classList.add("hidden");
+			else arrow.classList.remove("hidden");
+		});
 	});
 
 	const variants = {

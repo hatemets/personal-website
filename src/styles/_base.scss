@@ -73,6 +73,11 @@ section {
 	color: darkorange !important;
 }
 
+.hidden {
+	opacity: 0;
+	transform: scale(0.8);
+}
+
 // Raw styles
 a {
 	text-decoration: none;

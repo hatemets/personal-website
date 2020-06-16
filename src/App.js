@@ -14,12 +14,11 @@ const App = () => {
 	const navigationBarHeight = Number(navbarHeight.slice(0, -2));
 
 	useEffect(_ => {
-		const navigationBar = document.querySelector("nav");
-
 		document.addEventListener("scroll", () => {
 			const content = document.querySelector(".card");
 			const rect = content.getBoundingClientRect();
-			navigationBar.style.background = rect.y < navigationBarHeight ? color : color + opacity;
+			document.querySelector("nav").style.background =
+				rect.y < navigationBarHeight ? color : color + opacity;
 		});
 	});
 
