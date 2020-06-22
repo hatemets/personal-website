@@ -34,9 +34,13 @@ export const Home = () => {
 		const section = document.querySelector("#section-one");
 
 		document.addEventListener("scroll", _ => {
-			const relativeHeight = document.querySelector("#section-one").getBoundingClientRect().y;
-			if (relativeHeight < window.innerHeight) arrow.classList.add("hidden");
-			else arrow.classList.remove("hidden");
+			try {
+				const relativeHeight = document.querySelector("#section-one").getBoundingClientRect().y;
+				if (relativeHeight < window.innerHeight) arrow.classList.add("hidden");
+				else arrow.classList.remove("hidden");
+			} catch {
+				console.log("Error");
+			}
 		});
 	});
 

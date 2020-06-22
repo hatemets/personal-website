@@ -18,7 +18,7 @@
 
 	#image {
 		min-height: 200px;
-		background: linear-gradient(#321, #395);
+		background: navy;
 	}
 
 	#t2,
@@ -60,6 +60,12 @@
 // small
 @media screen and (max-width: 450px) {
 	#about {
-		min-height: 210vh !important;
+		min-height: 230vh !important;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	#about {
+		min-height: 290vh !important;
 	}
 }

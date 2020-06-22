@@ -15,8 +15,7 @@ const App = () => {
 
 	useEffect(_ => {
 		document.addEventListener("scroll", () => {
-			const content = document.querySelector(".card");
-			const rect = content.getBoundingClientRect();
+			const rect = document.querySelector(".card").getBoundingClientRect();
 			document.querySelector("nav").style.background =
 				rect.y < navigationBarHeight ? color : color + opacity;
 		});
