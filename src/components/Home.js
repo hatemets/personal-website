@@ -31,7 +31,7 @@ export const Home = () => {
 		});
 
 		const arrow = document.querySelector("#arrow");
-		const section = document.querySelector("#section-one");
+		// const section = document.querySelector("#section-one");
 
 		document.addEventListener("scroll", _ => {
 			try {
