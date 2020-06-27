@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Home } from "./components/Home";
 import { Navbar } from "./components/Navbar";
 import { About } from "./components/About";
@@ -6,20 +6,9 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { AnimatePresence } from "framer";
 import { Route, Switch, useLocation } from "react-router-dom";
-import variables from "./styles/_base.scss";
 
 const App = () => {
 	const location = useLocation();
-	const { color, opacity, navbarHeight } = variables;
-	const navigationBarHeight = Number(navbarHeight.slice(0, -2));
-
-	useEffect(_ => {
-		document.addEventListener("scroll", () => {
-			const rect = document.querySelector(".card").getBoundingClientRect();
-			document.querySelector("nav").style.background =
-				rect.y < navigationBarHeight ? color : color + opacity;
-		});
-	});
 
 	return (
 		<div id="App">

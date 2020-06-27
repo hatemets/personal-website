@@ -3,12 +3,21 @@ import { motion, useCycle } from "framer";
 import { MenuIcon } from "./MenuIcon";
 import { Sidebar } from "./Sidebar";
 import { NavLink, Link } from "react-router-dom";
+import variables from "../styles/_base.scss";
 
 export const Navbar = () => {
 	const [isOpen, toggleMenu] = useCycle(false, true);
 	const node = useRef();
+	const { color, opacity, navbarHeight } = variables;
+	const navigationBarHeight = Number(navbarHeight.slice(0, -2));
 
 	useEffect(() => {
+		document.addEventListener("scroll", () => {
+			const rect = document.querySelector(".card").getBoundingClientRect();
+			document.querySelector("nav").style.background =
+				rect.y < navigationBarHeight ? color + "ff" : color + opacity;
+		});
+
 		const handleClickOutside = e => {
 			if (node.current.contains(e.target)) return;
 			else toggleMenu();
