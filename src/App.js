@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Home } from "./components/Home";
 import { Navbar } from "./components/Navbar";
 import { About } from "./components/About";
@@ -7,8 +7,10 @@ import { Footer } from "./components/Footer";
 import { AnimatePresence } from "framer";
 import { Route, Switch, useLocation } from "react-router-dom";
 
-const App = () => {
+const App = ({ hideLoader }) => {
 	const location = useLocation();
+
+	useEffect(_ => hideLoader, [hideLoader]);
 
 	return (
 		<div id="App">

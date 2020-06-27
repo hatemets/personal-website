@@ -18,7 +18,11 @@
 
 	#image {
 		min-height: 200px;
-		background: navy;
+		background-image: url(/images/tnf2.jpg);
+		background-repeat: no-repeat;
+		background-position: 75% 0;
+		background-size: cover;
+		margin-bottom: 25px;
 	}
 
 	#t2,
@@ -30,10 +34,6 @@
 	#p2 {
 		max-width: 95%;
 		margin: 15px auto;
-	}
-
-	#image {
-		margin-bottom: 25px;
 	}
 }
 
@@ -47,6 +47,12 @@
 			"t2 t2"
 			"p2 p2"
 			"p2 p2";
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	#image {
+		background-position: 0 80% !important;
 	}
 }
 

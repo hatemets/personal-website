@@ -8,6 +8,10 @@
 @import "styles/about.scss";
 @import "styles/contact.scss";
 
+body {
+	background: #eee;
+}
+
 // Main
 * {
 	overflow-x: hidden;
@@ -87,5 +91,31 @@ section {
 		#letter {
 			font-size: 2.8rem !important;
 		}
+	}
+}
+
+.loader {
+	position: absolute;
+	top: calc(50% - 4em);
+	left: calc(50% - 4em);
+	width: 4em;
+	height: 4em;
+	border: 0.8em solid #000;
+	border-radius: 50%;
+	border-left: 0.8em solid #6cd2d9;
+	animation: loader 0.7s infinite linear;
+	overflow: hidden;
+}
+
+.loader-hide {
+	opacity: 0;
+}
+
+@keyframes loader {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
 	}
 }
