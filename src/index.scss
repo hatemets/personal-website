@@ -96,8 +96,8 @@ section {
 
 .loader {
 	position: absolute;
-	top: calc(50% - 4em);
-	left: calc(50% - 4em);
+	top: calc(50% - 3em);
+	left: calc(50% - 3em);
 	width: 4em;
 	height: 4em;
 	border: 0.8em solid #000;
@@ -105,6 +105,7 @@ section {
 	border-left: 0.8em solid #6cd2d9;
 	animation: loader 0.7s infinite linear;
 	overflow: hidden;
+	transition: 50ms all;
 }
 
 .loader-hide {

@@ -9,16 +9,14 @@ const loader = document.querySelector(".loader");
 const showLoader = _ => loader.classList.remove("loader-hide");
 const hideLoader = _ => loader.classList.add("loader-hide");
 
-setTimeout(() => {
-	ReactDOM.render(
-		<React.StrictMode>
-			<BrowserRouter>
-				<App hideLoader={hideLoader} showLoader={showLoader} />
-			</BrowserRouter>
-		</React.StrictMode>,
-		document.getElementById("root")
-	);
-}, 300);
+ReactDOM.render(
+	<React.StrictMode>
+		<BrowserRouter>
+			<App hideLoader={hideLoader} showLoader={showLoader} />
+		</BrowserRouter>
+	</React.StrictMode>,
+	document.getElementById("root")
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

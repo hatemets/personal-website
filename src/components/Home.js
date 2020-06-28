@@ -7,7 +7,7 @@ const Arrow = ({ id }) => (
 	<svg id={id} className="arrow" width={arrowWidth.slice(0, -2)} height="450" viewBox="0 0 350 450">
 		<path
 			d="M 130 20 l 100 0 l 0 250 l 100 0 l -150 170 l -150 -170 l 100 0 l 0 -250"
-			fill="white"
+			fill="#ddd"
 			stroke="white"
 			stroke-width="1"
 		></path>
