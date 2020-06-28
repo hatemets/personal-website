@@ -6,13 +6,12 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 const loader = document.querySelector(".loader");
-const showLoader = _ => loader.classList.remove("loader-hide");
 const hideLoader = _ => loader.classList.add("loader-hide");
 
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<App hideLoader={hideLoader} showLoader={showLoader} />
+			<App hideLoader={hideLoader} />
 		</BrowserRouter>
 	</React.StrictMode>,
 	document.getElementById("root")

@@ -29,7 +29,7 @@ export const Navbar = () => {
 		else document.removeEventListener("mousedown", handleClickOutside);
 
 		return _ => document.removeEventListener("mousedown", handleClickOutside);
-	}, [isOpen, toggleMenu, navigationBarHeight, opacity, color]);
+	}, [isOpen, toggleMenu, navigationBarHeight, opacity, color, opaque, transparent]);
 
 	return (
 		<motion.nav ref={node} initial={false} animate={isOpen ? "open" : "closed"}>

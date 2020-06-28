@@ -10,7 +10,7 @@ import { Route, Switch, useLocation } from "react-router-dom";
 const App = ({ hideLoader }) => {
 	const location = useLocation();
 
-	useEffect(_ => hideLoader, [hideLoader]);
+	useEffect(hideLoader, []);
 
 	return (
 		<div id="App">
