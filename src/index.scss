@@ -10,6 +10,7 @@
 
 body {
 	background: #eee;
+	z-index: -101;
 }
 
 // Main
@@ -95,6 +96,7 @@ section {
 }
 
 .loader {
+	z-index: -100;
 	position: absolute;
 	top: calc(50% - 3em);
 	left: calc(50% - 3em);

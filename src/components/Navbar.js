@@ -4,7 +4,6 @@ import { MenuIcon } from "./MenuIcon";
 import { Sidebar } from "./Sidebar";
 import { NavLink, Link } from "react-router-dom";
 import variables from "../styles/_base.scss";
-import logo from "../logo.svg";
 
 export const Navbar = () => {
 	const [isOpen, toggleMenu] = useCycle(false, true);
@@ -26,14 +25,9 @@ export const Navbar = () => {
 			else toggleMenu();
 		};
 
-		if (isOpen) {
-			const footer = document.querySelector("footer");
-			footer.style.zIndex = "-1";
-			document.addEventListener("mousedown", handleClickOutside);
-		} else {
-			document.querySelector("footer").style.zIndex = "1";
-			document.removeEventListener("mousedown", handleClickOutside);
-		}
+		if (isOpen) document.addEventListener("mousedown", handleClickOutside);
+		else document.removeEventListener("mousedown", handleClickOutside);
+
 		return _ => document.removeEventListener("mousedown", handleClickOutside);
 	}, [isOpen, toggleMenu, navigationBarHeight, opacity, color]);
 
@@ -46,7 +40,7 @@ export const Navbar = () => {
 						xlmns="http://www.w3.org/2000/svg"
 						width="100"
 						height="100"
-						viewPort="0 0 100 100"
+						viewBox="0 0 120 120"
 					>
 						<path
 							d="M 10 80 L 10 20 L 34 58 L 58 14 L 58 80 L 58 50 L 90 50 L 90 14 L 90 80"
