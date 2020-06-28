@@ -5,6 +5,29 @@
 		margin: auto;
 	}
 
+	.card {
+		position: relative;
+	}
+
+	.popup {
+		position: absolute;
+		opacity: 0;
+		z-index: -999;
+		top: 40%;
+		box-shadow: 0 0 5px 5px #222;
+		left: calc(50% - 200px);
+		padding: 30px;
+		font-size: 1.3rem;
+		color: #fff;
+		background: #222;
+		border-radius: 5px;
+		opacity: 0.95;
+		width: 400px;
+		margin: auto;
+		opacity: 0;
+		transition: opacity 250ms;
+	}
+
 	#medium-list {
 		display: flex;
 		justify-content: center;
@@ -21,7 +44,6 @@
 
 			&.facebook {
 				background: #3b5998;
-				// border: 1px #3b5998 solid;
 			}
 
 			&.email {
@@ -32,7 +54,6 @@
 
 			&.discord {
 				background-color: #555;
-				// border: 1px #7289da solid;
 				color: #fff;
 			}
 		}

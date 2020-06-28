@@ -8,16 +8,15 @@ import variables from "../styles/_base.scss";
 export const Navbar = () => {
 	const [isOpen, toggleMenu] = useCycle(false, true);
 	const node = useRef();
-	const { color, opacity, navbarHeight } = variables;
+	const { color, navbarHeight } = variables;
 	const navigationBarHeight = Number(navbarHeight.slice(0, -2));
-	const opaque = `${color}ff`;
-	const transparent = color + opacity;
 
 	useEffect(() => {
 		document.addEventListener("scroll", () => {
-			const rect = document.querySelector(".card").getBoundingClientRect();
+			const rect = document.querySelector(".content").firstElementChild.getBoundingClientRect();
+
 			document.querySelector("nav").style.background =
-				rect.y < navigationBarHeight ? opaque : transparent;
+				rect.y < navigationBarHeight ? "#333333ff" : "#333333aa";
 		});
 
 		const handleClickOutside = e => {
@@ -29,7 +28,7 @@ export const Navbar = () => {
 		else document.removeEventListener("mousedown", handleClickOutside);
 
 		return _ => document.removeEventListener("mousedown", handleClickOutside);
-	}, [isOpen, toggleMenu, navigationBarHeight, opacity, color, opaque, transparent]);
+	}, [isOpen, toggleMenu, navigationBarHeight]);
 
 	return (
 		<motion.nav ref={node} initial={false} animate={isOpen ? "open" : "closed"}>
