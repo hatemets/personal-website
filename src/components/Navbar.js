@@ -8,15 +8,18 @@ import variables from "../styles/_base.scss";
 export const Navbar = () => {
 	const [isOpen, toggleMenu] = useCycle(false, true);
 	const node = useRef();
-	const { color, navbarHeight } = variables;
+	const { navbarHeight } = variables;
 	const navigationBarHeight = Number(navbarHeight.slice(0, -2));
 
 	useEffect(() => {
-		document.addEventListener("scroll", () => {
-			const rect = document.querySelector(".content").firstElementChild.getBoundingClientRect();
-
-			document.querySelector("nav").style.background =
-				rect.y < navigationBarHeight ? "#333333ff" : "#333333aa";
+		document.addEventListener("scroll", _ => {
+			try {
+				const rect = document.querySelector(".content").firstElementChild.getBoundingClientRect();
+				document.querySelector("nav").style.background =
+					rect.y < navigationBarHeight ? "#333333ff" : "#333333aa";
+			} catch {
+				document.querySelector("nav").style.background = "#333333";
+			}
 		});
 
 		const handleClickOutside = e => {

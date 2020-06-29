@@ -37,9 +37,7 @@ export const Home = () => {
 				const relativeHeight = document.querySelector("#section-one").getBoundingClientRect().y;
 				if (relativeHeight < window.innerHeight) arrow.classList.add("hidden");
 				else arrow.classList.remove("hidden");
-			} catch {
-				console.log("Error");
-			}
+			} catch {}
 		});
 	});
 

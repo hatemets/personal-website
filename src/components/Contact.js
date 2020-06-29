@@ -33,9 +33,6 @@ export const Contact = () => {
 				transition={pageTransition}
 				className="content"
 			>
-				<div className="popup">
-					<p>Username copied on clipboard</p>
-				</div>
 				<div className="card">
 					<h1 className="title">Contact information</h1>
 					<p>
@@ -64,6 +61,10 @@ export const Contact = () => {
 					<a className="link" href="https://github.com/hatemets">
 						Click here to visit my github account
 					</a>
+				</div>
+
+				<div className="popup">
+					<p>Username copied on clipboard</p>
 				</div>
 			</motion.div>
 		</div>

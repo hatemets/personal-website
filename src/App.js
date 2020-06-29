@@ -6,6 +6,7 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { AnimatePresence } from "framer";
 import { Route, Switch, useLocation } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = ({ hideLoader }) => {
 	const location = useLocation();
@@ -17,6 +18,7 @@ const App = ({ hideLoader }) => {
 			<Navbar />
 			<div id="main-content">
 				<AnimatePresence exitBeforeEnter>
+					<ScrollToTop />
 					<Switch location={location} key={location.pathname}>
 						<Route exact path="/" component={Home} />
 						<Route path="/contact" component={Contact} />
