@@ -1,26 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer";
 import { pageAnimation } from "../assets/animationProperties";
+import { Transition } from "react-transition-group";
+import { Popup } from "./Popup";
 
 export const Contact = () => {
+	const [visible, setVisible] = useState(false);
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 	const discordUser = "azucar#0481";
 
-	const handleClick = e => {
-		if (e.target.textContent === "Discord") {
-			navigator.clipboard.writeText(discordUser);
-			document.querySelector(".popup").style.opacity = 1;
-			document.querySelector(".popup").style.zIndex = 999;
-			console.log("Username copied on your clipboard");
-
-			setTimeout(() => {
-				document.querySelector(".popup").style.opacity = 0;
-			}, 2000);
-
-			setTimeout(() => {
-				document.querySelector(".popup").style.zIndex = -111;
-			}, 2300);
-		}
+	const handleClick = _ => {
+		navigator.clipboard.writeText(discordUser);
+		setVisible(true);
+		setTimeout(_ => setVisible(false), 1000);
 	};
 
 	return (
@@ -40,11 +32,11 @@ export const Contact = () => {
 						some other reason, you can contact me via the following mediums:
 					</p>
 					<ul id="medium-list">
-						<li className="email" onClick={handleClick}>
-							Email
+						<li className="email">
+							<a href="mailto:heidmetsmark@gmail.com">Email</a>
 						</li>
-						<li className="facebook" onClick={handleClick}>
-							Facebook
+						<li className="facebook">
+							<a href="https://www.facebook.com/hatemets">Facebook</a>
 						</li>
 						<li className="discord" onClick={handleClick}>
 							Discord
@@ -62,10 +54,7 @@ export const Contact = () => {
 						Click here to visit my github account
 					</a>
 				</div>
-
-				<div className="popup">
-					<p>Username copied on clipboard</p>
-				</div>
+				<Popup in={visible} text="Username copied to clipboard" />
 			</motion.div>
 		</div>
 	);

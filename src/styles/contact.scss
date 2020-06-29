@@ -11,20 +11,18 @@
 
 	.popup {
 		position: absolute;
-		opacity: 0;
-		z-index: -999;
+		display: none;
+		z-index: 999;
 		top: 40%;
-		box-shadow: 0 0 5px 5px #222;
+		box-shadow: 0 0 2px 2px #222;
 		left: calc(50% - 200px);
-		padding: 30px;
+		padding: 10px;
 		font-size: 1.3rem;
 		color: #fff;
 		background: #222;
 		border-radius: 5px;
-		opacity: 0.95;
 		width: 400px;
 		margin: auto;
-		opacity: 0;
 		transition: opacity 250ms;
 	}
 
@@ -47,9 +45,12 @@
 			}
 
 			&.email {
-				color: #000;
 				background-color: #ccc;
 				border: 1px #fff solid;
+
+				a {
+					color: #000;
+				}
 			}
 
 			&.discord {
