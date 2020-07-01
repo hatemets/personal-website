@@ -264,3 +264,11 @@ body {
 		}
 	}
 }
+
+@media screen and (orientation: landscape) {
+	#home {
+		.component-container {
+			min-height: 250vh !important;
+		}
+	}
+}

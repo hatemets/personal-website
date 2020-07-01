@@ -30,6 +30,9 @@ export const Home = () => {
 			}
 		});
 
+		const el = document.querySelector(".component-container");
+		console.log(el.offsetHeight);
+
 		const arrow = document.querySelector("#arrow");
 
 		document.addEventListener("scroll", _ => {

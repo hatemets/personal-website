@@ -116,7 +116,7 @@ section {
 }
 
 .loader-hide {
-	opacity: 0;
+	display: none;
 }
 
 @keyframes loader {
@@ -125,5 +125,11 @@ section {
 	}
 	to {
 		transform: rotate(360deg);
+	}
+}
+
+@media screen and (orientation: landscape) {
+	#arrow {
+		display: none;
 	}
 }

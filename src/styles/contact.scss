@@ -102,3 +102,11 @@
 		}
 	}
 }
+
+@media screen and (orientation: landscape) {
+	#contact {
+		&.component-container {
+			min-height: 320vh;
+		}
+	}
+}
