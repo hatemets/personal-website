@@ -93,6 +93,11 @@ section {
 			font-size: 2.8rem !important;
 		}
 	}
+
+	#popup {
+		left: calc(50% - 150px) !important;
+		width: 300px !important;
+	}
 }
 
 .loader {

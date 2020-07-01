@@ -257,4 +257,10 @@ body {
 	#arrow {
 		display: none;
 	}
+
+	#home {
+		.component-container {
+			min-height: 140vh !important;
+		}
+	}
 }

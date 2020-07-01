@@ -28,8 +28,8 @@ const transitionStyles = {
 export const Popup = ({ in: inProps, text }) => (
 	<Transition in={inProps} timeout={300}>
 		{state => (
-			<div style={{ ...defaultStyles, ...transitionStyles[state] }}>
-				<p>{text}</p>
+			<div id="popup" style={{ ...defaultStyles, ...transitionStyles[state] }}>
+				<p style={{ textAlign: "center" }}>{text}</p>
 			</div>
 		)}
 	</Transition>

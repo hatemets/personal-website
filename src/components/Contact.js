@@ -54,8 +54,8 @@ export const Contact = () => {
 						Click here to visit my github account
 					</a>
 				</div>
-				<Popup in={visible} text="Username copied to clipboard" />
 			</motion.div>
+			<Popup in={visible} text="Username copied to clipboard" />
 		</div>
 	);
 };
