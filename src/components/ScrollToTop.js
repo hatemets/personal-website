@@ -5,7 +5,7 @@ const ScrollToTop = ({ history }) => {
 	useEffect(() => {
 		const reset = history.listen(_ => window.scrollTo(0, 0));
 		return _ => reset();
-	}, []);
+	}, [history]);
 
 	return null;
 };

@@ -6,7 +6,7 @@
 	grid-template-columns: auto 40%;
 	grid-template-rows:
 		minmax(40px, auto) repeat(2, auto) minmax(40px, auto)
-		repeat(4, auto);
+		repeat(5, auto);
 	grid-template-areas:
 		"t1 image"
 		"p1 image"
@@ -16,7 +16,12 @@
 		"p2 image"
 		"p2 image"
 		"t3 t3"
-		"tb tb";
+		"tb tb"
+		"note note";
+
+	p {
+		text-align: justify;
+	}
 
 	#image {
 		min-height: 200px;
@@ -83,6 +88,13 @@
 	min-height: 100em;
 }
 
+#note {
+	margin-top: 10px !important;
+	display: block;
+	margin: auto;
+	color: #ccc;
+}
+
 @media screen and (max-width: 1100px) {
 	#about-container {
 		grid-template-areas:
@@ -94,7 +106,8 @@
 			"p2 p2"
 			"p2 p2"
 			"t3 t3"
-			"tb tb";
+			"tb tb"
+			"note note";
 	}
 }
 
@@ -111,7 +124,7 @@
 	}
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (max-device-width: 500px) {
 	#about {
 		.component-container {
 			min-height: 400vh !important;

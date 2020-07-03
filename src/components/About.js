@@ -58,13 +58,14 @@ export const About = () => {
 						</tr>
 						<tr>
 							<td>200m</td>
-							<td>22.8</td>
+							<td>22.64*</td>
 						</tr>
 						<tr>
 							<td>400m</td>
-							<td>50.59</td>
+							<td>50.20</td>
 						</tr>
 					</table>
+					<p id="note">* Wind not legal</p>
 				</div>
 			</motion.div>
 		</div>

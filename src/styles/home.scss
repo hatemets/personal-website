@@ -169,10 +169,19 @@ body {
 	}
 }
 
+@media screen and (max-width: 1200px) {
+	#section-one,
+	#section-two {
+		p {
+			text-align: justify;
+		}
+	}
+}
+
 @media screen and (max-width: 700px) {
 	body {
 		#main-content {
-			padding-bottom: 297px; // needs to be made dynamic
+			padding-bottom: 297px;
 		}
 
 		#section-one {
@@ -265,7 +274,7 @@ body {
 	}
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (max-device-width: 500px) {
 	#home {
 		.component-container {
 			min-height: 250vh !important;

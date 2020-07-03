@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer";
 import { pageAnimation } from "../assets/animationProperties";
-import { Transition } from "react-transition-group";
 import { Popup } from "./Popup";
 
 export const Contact = () => {

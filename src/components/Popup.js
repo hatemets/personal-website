@@ -7,15 +7,16 @@ const defaultStyles = {
 	zIndex: "-100",
 	position: "absolute",
 	top: "40%",
-	boxShadow: "0 0 1px 1px #222",
+	boxShadow: "0 0 4px 4px #888",
 	left: "calc(50% - 200px)",
-	padding: "10px",
-	fontSize: "1.3rem",
+	padding: "20px",
+	fontSize: "1.2rem",
 	color: "#fff",
 	background: "#222",
 	borderRadius: "5px",
 	width: "400px",
-	margin: "auto"
+	margin: "auto",
+	transform: "scale(1.2)"
 };
 
 const transitionStyles = {

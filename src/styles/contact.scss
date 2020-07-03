@@ -9,23 +9,6 @@
 		position: relative;
 	}
 
-	.popup {
-		position: absolute;
-		display: none;
-		z-index: 999;
-		top: 40%;
-		box-shadow: 0 0 2px 2px #222;
-		left: calc(50% - 200px);
-		padding: 10px;
-		font-size: 1.3rem;
-		color: #fff;
-		background: #222;
-		border-radius: 5px;
-		width: 400px;
-		margin: auto;
-		transition: opacity 250ms;
-	}
-
 	#medium-list {
 		display: flex;
 		justify-content: center;
@@ -75,7 +58,7 @@
 		}
 
 		&.component-container {
-			min-height: 130vh;
+			min-height: 70em;
 		}
 	}
 }
@@ -84,7 +67,7 @@
 @media screen and (max-width: 450px) {
 	#contact {
 		&.component-container {
-			min-height: 200vh;
+			min-height: 90em;
 		}
 
 		#medium-list {
@@ -93,20 +76,10 @@
 			}
 		}
 	}
-}
 
-@media screen and (max-width: 350px) {
-	#contact {
-		&.component-container {
-			min-height: 240vh;
-		}
-	}
-}
-
-@media screen and (orientation: landscape) {
-	#contact {
-		&.component-container {
-			min-height: 320vh;
-		}
+	#popup {
+		left: calc(50% - 150px) !important;
+		width: 300px !important;
+		transform: scale(1) !important;
 	}
 }
