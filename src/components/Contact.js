@@ -24,7 +24,7 @@ export const Contact = () => {
 				transition={pageTransition}
 				className="content"
 			>
-				<div className="card">
+				<div className="card" id="contact-info">
 					<h1 className="title">Contact information</h1>
 					<p>
 						In case you are interested in hiring me, have me build a website for your company or for
@@ -48,7 +48,7 @@ export const Contact = () => {
 				</div>
 				<div className="card">
 					<h1 className="title">Projects</h1>
-					<p>Check out my github page to see what I've been doing</p>
+					<p>For further informating regarding my coding projects, check my Github account</p>
 					<a className="link" href="https://github.com/hatemets">
 						Click here to visit my github account
 					</a>

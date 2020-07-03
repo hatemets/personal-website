@@ -179,56 +179,60 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-	body {
-		#main-content {
-			padding-bottom: 297px;
+	#main-content {
+		padding-bottom: 297px;
+	}
+
+	#section-one {
+		grid-template-rows: repeat(8, 1fr) minmax(450px, auto);
+		grid-template-columns: auto minmax(400px, auto);
+
+		grid-template-areas:
+			"title title title title"
+			"title title title title"
+			"title title title title"
+			"text text text text"
+			"text text text text"
+			"text text text text"
+			"text text text text"
+			"text text text text"
+			". image image .";
+
+		p {
+			text-align: justify;
+			grid-area: text;
 		}
+	}
 
-		#section-one {
-			grid-template-rows: repeat(8, 1fr) minmax(450px, auto);
-			grid-template-columns: auto minmax(400px, auto);
-
-			grid-template-areas:
-				"title title title title"
-				"title title title title"
-				"title title title title"
-				"text text text text"
-				"text text text text"
-				"text text text text"
-				"text text text text"
-				"text text text text"
-				". image image .";
-
-			p {
-				text-align: justify;
-				grid-area: text;
-			}
+	#section-two {
+		p {
+			text-align: justify;
 		}
+	}
 
-		#section-two {
-			p {
-				text-align: justify;
-			}
-		}
+	#letter {
+		font-size: 3rem;
+	}
 
-		#letter {
-			font-size: 3rem;
-		}
-
-		#image-two,
-		#image-three {
-			.card {
-				h1 {
-					margin: auto;
-					font-size: 2.4rem;
-				}
-			}
-		}
-
-		#image-three {
+	#image-two,
+	#image-three {
+		.card {
 			h1 {
 				margin: auto;
+				font-size: 2.4rem;
 			}
+		}
+	}
+
+	#image-three {
+		h1 {
+			margin: auto;
+		}
+	}
+
+	#greeting {
+		p {
+			text-align: justify;
 		}
 	}
 }
