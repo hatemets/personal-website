@@ -26,9 +26,10 @@ export const About = () => {
 						<h3 className="subtitle">A more detailed introduction</h3>
 					</h1>
 					<p id="p1">
-						My name is Mark Heidmets and I'm a student from Gustav Adolf Grammar School. I have been
-						learning coding for about 3 years, specializing in web design and browser automation. I
-						am passionate about learning new technologies and concepts every day.
+						My name is Mark Heidmets and I live in Tallinn, Estonia. I'm currently studying in
+						Gustav Adolf Grammar School and am graduating high school in 2021. I've been practicing
+						coding for 3 years, specializing in web design and browser automation. I'm passionate
+						about learning new technologies and concepts every day.
 					</p>
 					<br className="break" />
 					<div id="image"></div>
