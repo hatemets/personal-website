@@ -43,6 +43,10 @@ section {
 	background: #ddd;
 	max-height: auto;
 
+	p {
+		font-size: 1.25rem !important;
+	}
+
 	h1 {
 		font-size: 40px;
 	}
@@ -120,6 +124,14 @@ section {
 	}
 	to {
 		transform: rotate(360deg);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.card {
+		p {
+			font-size: 1rem !important;
+		}
 	}
 }
 

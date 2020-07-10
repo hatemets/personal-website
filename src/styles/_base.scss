@@ -17,12 +17,6 @@
 	transform: $property;
 }
 
-section {
-	p {
-		font-size: 1.2rem;
-	}
-}
-
 // Classes
 .card {
 	margin: 15px auto;
@@ -35,7 +29,7 @@ section {
 	p,
 	li,
 	a {
-		font-size: 1.2rem;
+		font-size: 1.2rem !important;
 	}
 }
 
