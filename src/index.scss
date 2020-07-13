@@ -96,31 +96,12 @@ section {
 }
 
 .loader {
-	z-index: -100;
-	position: absolute;
-	top: calc(50% - 3em);
-	left: calc(50% - 3em);
-	width: 4em;
-	height: 4em;
-	border: 0.8em solid #000;
-	border-radius: 50%;
-	border-left: 0.8em solid #6cd2d9;
-	animation: loader 0.7s infinite linear;
-	overflow: hidden;
-	transition: 50ms all;
 }
 
 .loader-hide {
-	display: none;
 }
 
-@keyframes loader {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+@keyframes loaderHide {
 }
 
 @media screen and (orientation: landscape) and (max-device-width: 500px) {
