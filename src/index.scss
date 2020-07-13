@@ -9,8 +9,7 @@
 @import "styles/contact.scss";
 
 body {
-	background: #333;
-	z-index: -101;
+	background: #eee;
 }
 
 // Main
@@ -96,12 +95,21 @@ section {
 }
 
 .loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: scale(1.8);
 }
 
 .loader-hide {
+	animation: loaderHide 500ms;
 }
 
 @keyframes loaderHide {
+	100% {
+		opacity: 0;
+		visiblity: hidden;
+	}
 }
 
 @media screen and (orientation: landscape) and (max-device-width: 500px) {
