@@ -1,18 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Sugar } from "react-preloaders";
 import { BrowserRouter } from "react-router-dom";
 import "./index.scss";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-const loader = document.querySelector(".loader");
-const hideLoader = _ => loader.classList.add("display-none");
-
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<App hideLoader={hideLoader} />
+			<App />
 		</BrowserRouter>
+		<Sugar />
 	</React.StrictMode>,
 	document.getElementById("root")
 );
