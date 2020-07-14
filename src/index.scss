@@ -86,38 +86,18 @@ section {
 	}
 }
 
+.fikuze {
+	// loader class
+	overflow: hidden;
+	padding: 25px;
+}
+
 @media screen and (max-width: 450px) {
 	#popup-text-container {
 		#letter {
 			font-size: 2.8rem !important;
 		}
 	}
-}
-
-#loader-container {
-	background: #222;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-}
-
-.loader {
-	position: absolute;
-	top: calc(50vh - 25px);
-	left: calc(50vw - 25px);
-	border-radius: 50%;
-	border: 5px solid #222;
-	border-top-color: #fca103;
-	width: 50px;
-	height: 50px;
-	background: transparent;
-	animation: loader 800ms infinite;
-}
-
-.display-none {
-	display: none;
 }
 
 @keyframes loader {

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Home } from "./components/Home";
 import { Navbar } from "./components/Navbar";
 import { About } from "./components/About";
@@ -8,10 +8,8 @@ import { AnimatePresence } from "framer";
 import { Route, Switch, useLocation } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
-const App = ({ hideLoader }) => {
+const App = () => {
 	const location = useLocation();
-
-	useEffect(hideLoader, []);
 
 	return (
 		<div id="App">
