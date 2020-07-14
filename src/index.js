@@ -5,7 +5,7 @@ import "./index.scss";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-const loader = document.querySelector("#loader-container");
+const loader = document.querySelector(".loader");
 const hideLoader = _ => loader.classList.add("display-none");
 
 ReactDOM.render(

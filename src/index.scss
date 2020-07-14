@@ -8,6 +8,10 @@
 @import "styles/about.scss";
 @import "styles/contact.scss";
 
+body {
+	background: #444;
+}
+
 // Main
 * {
 	overflow-x: hidden;
