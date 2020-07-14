@@ -274,10 +274,14 @@ body {
 	}
 }
 
-@media screen and (orientation: landscape) and (max-device-width: 500px) {
+@media screen and (orientation: landscape) and (max-device-width: 900px) and (max-device-height: 700px) {
 	#home {
 		.component-container {
-			min-height: 250vh !important;
+			min-height: 50em !important;
 		}
+	}
+
+	#arrow {
+		display: none;
 	}
 }
