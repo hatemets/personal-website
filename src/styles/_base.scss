@@ -17,6 +17,16 @@
 	transform: $property;
 }
 
+a,
+svg {
+	-webkit-tap-highlight-color: transparent;
+
+	&:active,
+	&:focus {
+		background-color: transparent;
+	}
+}
+
 section {
 	p {
 		font-size: 1.2rem;
