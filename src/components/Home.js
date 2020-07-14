@@ -14,7 +14,7 @@ const Arrow = ({ id }) => (
 	</svg>
 );
 
-export const Home = () => {
+export const Home = _ => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 	const string = "Hi! I'm Mark";
 	const popupString = Array.from(string);
