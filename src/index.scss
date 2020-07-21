@@ -83,7 +83,6 @@ section {
 }
 
 #preloader > div {
-	// loader class
 	overflow: hidden;
 	padding: 25px;
 }
@@ -95,16 +94,6 @@ section {
 		}
 	}
 }
-
-@keyframes loader {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
 @media screen and (orientation: landscape) and (max-device-width: 500px) {
 	#arrow {
 		display: none;
