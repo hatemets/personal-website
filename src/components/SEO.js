@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Meta from "../meta";
 
-const SEO = ({ uid }) => {
-	let content = Meta[Number(uid)];
+const SEO = () => {
+	const content = Meta[3];
 
 	return (
 		<Helmet>

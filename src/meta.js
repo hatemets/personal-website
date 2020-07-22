@@ -16,5 +16,11 @@ module.exports = [
 		title: "Contact information | Personal website",
 		description: "Contact information, including email and social media.",
 		keywords: "contact, info, track and field, markh, mark heidmets, hatemets"
+	},
+	{
+		url: "default",
+		title: "Personal website",
+		description: "General information about my doings and web development services.",
+		keywords: "markh, mark heidmets, hatemets, website, homepage, portfolio, heidmets resume"
 	}
 ];
