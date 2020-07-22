@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import SEO from "./SEO";
 import { motion } from "framer";
 import { pageAnimation } from "../assets/animationProperties";
 
@@ -69,8 +68,6 @@ export const About = () => {
 					<p id="note">* Wind not legal</p>
 				</div>
 			</motion.div>
-
-			<SEO uid="2" />
 		</div>
 	);
 };
