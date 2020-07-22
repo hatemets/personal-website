@@ -6,6 +6,7 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { AnimatePresence } from "framer";
 import { Route, Switch, useLocation } from "react-router-dom";
+import SEO from "./components/SEO";
 import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
 				</AnimatePresence>
 			</div>
 			<Footer />
+			<SEO />
 		</div>
 	);
 };

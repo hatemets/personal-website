@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { motion } from "framer";
 import { pageAnimation } from "../assets/animationProperties";
 import { arrowWidth } from "../styles/_variables.scss";
-import SEO from "./SEO";
 
 const Arrow = ({ id }) => (
 	<svg id={id} className="arrow" width={arrowWidth.slice(0, -2)} height="450" viewBox="0 0 350 450">
@@ -143,8 +142,6 @@ export const Home = () => {
 					<h1>Feel free to contact me</h1>
 				</div>
 			</div>
-
-			<SEO uid="1" />
 		</motion.div>
 	);
 };
