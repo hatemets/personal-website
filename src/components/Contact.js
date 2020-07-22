@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SEO from "./SEO";
 import { motion } from "framer";
 import { pageAnimation } from "../assets/animationProperties";
 import { Popup } from "./Popup";
@@ -55,6 +56,7 @@ export const Contact = () => {
 				</div>
 			</motion.div>
 			<Popup in={visible} text="Username copied to clipboard" />
+			<SEO uid="3" />
 		</div>
 	);
 };

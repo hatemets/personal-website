@@ -2,8 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Meta from "../meta";
 
-const SEO = ({ id }) => {
-	let content = Meta[Number(id)];
+const SEO = ({ uid }) => {
+	let content = Meta[Number(uid)];
 
 	return (
 		<Helmet>

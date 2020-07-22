@@ -19,6 +19,7 @@ export const Home = () => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 	const string = "Hi! I'm Mark";
 	const popupString = Array.from(string);
+	const arrow = document.querySelector("#arrow");
 
 	useEffect(() => {
 		popupString.forEach(letter => {
@@ -30,11 +31,6 @@ export const Home = () => {
 				if (!el.style.gridArea.includes("/")) el.style.gridArea = letter;
 			}
 		});
-
-		const el = document.querySelector(".component-container");
-		console.log(el.offsetHeight);
-
-		const arrow = document.querySelector("#arrow");
 
 		document.addEventListener("scroll", _ => {
 			try {
@@ -148,7 +144,7 @@ export const Home = () => {
 				</div>
 			</div>
 
-			<SEO urlId="1" />
+			<SEO uid="1" />
 		</motion.div>
 	);
 };
