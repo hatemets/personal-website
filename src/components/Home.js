@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer";
 import { pageAnimation } from "../assets/animationProperties";
 import { arrowWidth } from "../styles/_variables.scss";
+import SEO from "./SEO";
 
 const Arrow = ({ id }) => (
 	<svg id={id} className="arrow" width={arrowWidth.slice(0, -2)} height="450" viewBox="0 0 350 450">
@@ -14,12 +15,12 @@ const Arrow = ({ id }) => (
 	</svg>
 );
 
-export const Home = _ => {
+export const Home = () => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 	const string = "Hi! I'm Mark";
 	const popupString = Array.from(string);
 
-	useEffect(_ => {
+	useEffect(() => {
 		popupString.forEach(letter => {
 			if (letter !== " ") {
 				const el = document.getElementsByClassName(letter)[0];
@@ -146,6 +147,8 @@ export const Home = _ => {
 					<h1>Feel free to contact me</h1>
 				</div>
 			</div>
+
+			<SEO urlId="1" />
 		</motion.div>
 	);
 };

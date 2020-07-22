@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "react-helmet": "^6.1.0",
     "react-preloaders": "^3.0.3",
     "react-router": "^5.1.2",
     "react-spring": "^8.0.27"
