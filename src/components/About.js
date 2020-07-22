@@ -62,7 +62,7 @@ export const About = () => {
 						</tr>
 						<tr>
 							<td>400m</td>
-							<td>50.20</td>
+							<td>49.91</td>
 						</tr>
 					</table>
 					<p id="note">* Wind not legal</p>
