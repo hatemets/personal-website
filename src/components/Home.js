@@ -18,9 +18,10 @@ export const Home = () => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 	const string = "Hi! I'm Mark";
 	const popupString = Array.from(string);
-	const arrow = document.querySelector("#arrow");
 
 	useEffect(() => {
+		const arrow = document.querySelector("#arrow");
+
 		popupString.forEach(letter => {
 			if (letter !== " ") {
 				const el = document.getElementsByClassName(letter)[0];
