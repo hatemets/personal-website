@@ -8,11 +8,6 @@
 @import "styles/about.scss";
 @import "styles/contact.scss";
 
-body {
-	background: #333;
-	z-index: -101;
-}
-
 // Main
 * {
 	overflow-x: hidden;
@@ -91,46 +86,15 @@ section {
 	}
 }
 
+#preloader > div {
+	overflow: hidden;
+	padding: 25px;
+}
+
 @media screen and (max-width: 450px) {
 	#popup-text-container {
 		#letter {
 			font-size: 2.8rem !important;
-		}
-	}
-}
-
-.loader {
-	z-index: -100;
-	position: absolute;
-	top: calc(50% - 3em);
-	left: calc(50% - 3em);
-	width: 4em;
-	height: 4em;
-	border: 0.8em solid #000;
-	border-radius: 50%;
-	border-left: 0.8em solid #6cd2d9;
-	animation: loader 0.7s infinite linear;
-	overflow: hidden;
-	transition: 50ms all;
-}
-
-.loader-hide {
-	display: none;
-}
-
-@keyframes loader {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.card {
-		p {
-			font-size: 1rem !important;
 		}
 	}
 }

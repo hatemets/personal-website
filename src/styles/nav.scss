@@ -1,7 +1,8 @@
 nav {
 	display: flex;
 	color: $textColor;
-	z-index: 2;
+	z-index: 3;
+	overflow: visible;
 	position: fixed;
 	opacity: 1;
 	width: 100vw;

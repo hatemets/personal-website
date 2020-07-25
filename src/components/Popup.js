@@ -7,7 +7,6 @@ const defaultStyles = {
 	zIndex: "-100",
 	position: "absolute",
 	top: "40%",
-	boxShadow: "0 0 4px 4px #888",
 	left: "calc(50% - 200px)",
 	padding: "20px",
 	fontSize: "1.2rem",

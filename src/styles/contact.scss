@@ -83,3 +83,11 @@
 		transform: scale(1) !important;
 	}
 }
+
+@media screen and (max-width: 1400px) and (min-width: 900px) and (max-height: 800px) {
+	#contact {
+		&.component-container {
+			min-height: 60em;
+		}
+	}
+}
