@@ -91,11 +91,19 @@ section {
 	padding: 25px;
 }
 
-@media screen and (max-width: 600px) {
+// @media screen and (max-width: 800px) {
+// 	.component-container {
+// 		background-attachment: initial;
+// 		background-repeat: no-repeat;
+// 		background-position: center;
+// 	}
+// }
+
+@supports (-webkit-touch-callout: none) {
 	.component-container {
-		background: url(/images/forest1.jpg);
-		background-attachment: none;
-		background-position: auto;
+		background-attachment: initial;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 }
 
