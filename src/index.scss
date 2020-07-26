@@ -104,3 +104,9 @@ section {
 		display: none;
 	}
 }
+
+@supports (-webkit-touch-callout: none) {
+	.component-container {
+		background-attachment: none;
+	}
+}
