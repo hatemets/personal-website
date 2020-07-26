@@ -28,7 +28,6 @@
 	background-position: center;
 	width: 100vw;
 	min-height: 100vh;
-	background-attachment: fixed;
 	background-image: url(/images/forest1.jpg);
 }
 
@@ -89,6 +88,14 @@ section {
 #preloader > div {
 	overflow: hidden;
 	padding: 25px;
+}
+
+@media screen and (max-width: 600px) {
+	.component-container {
+		background-attachment: none;
+		background-position: none;
+		background-size: none;
+	}
 }
 
 @media screen and (max-width: 450px) {
