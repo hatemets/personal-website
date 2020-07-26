@@ -19,7 +19,9 @@ export const Home = () => {
 	const string = "Hi! I'm Mark";
 	const popupString = Array.from(string);
 
-	useEffect(_ => {
+	useEffect(() => {
+		const arrow = document.querySelector("#arrow");
+
 		popupString.forEach(letter => {
 			if (letter !== " ") {
 				const el = document.getElementsByClassName(letter)[0];
@@ -29,11 +31,6 @@ export const Home = () => {
 				if (!el.style.gridArea.includes("/")) el.style.gridArea = letter;
 			}
 		});
-
-		const el = document.querySelector(".component-container");
-		console.log(el.offsetHeight);
-
-		const arrow = document.querySelector("#arrow");
 
 		document.addEventListener("scroll", _ => {
 			try {
