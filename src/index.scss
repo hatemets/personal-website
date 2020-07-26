@@ -91,22 +91,6 @@ section {
 	padding: 25px;
 }
 
-// @media screen and (max-width: 800px) {
-// 	.component-container {
-// 		background-attachment: initial;
-// 		background-repeat: no-repeat;
-// 		background-position: center;
-// 	}
-// }
-
-@supports (-webkit-touch-callout: none) {
-	.component-container {
-		background-attachment: initial;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-}
-
 @media screen and (max-width: 450px) {
 	#popup-text-container {
 		#letter {
@@ -118,5 +102,14 @@ section {
 @media screen and (orientation: landscape) and (max-device-width: 500px) {
 	#arrow {
 		display: none;
+	}
+}
+
+@supports (-webkit-touch-callout: none) {
+	.component-container,
+	.image {
+		background-attachment: initial;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 }
