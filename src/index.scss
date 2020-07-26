@@ -91,6 +91,14 @@ section {
 	padding: 25px;
 }
 
+@media screen and (max-width: 600px) {
+	.component-container {
+		background: url(/images/forest1.jpg);
+		background-attachment: none;
+		background-position: auto;
+	}
+}
+
 @media screen and (max-width: 450px) {
 	#popup-text-container {
 		#letter {
