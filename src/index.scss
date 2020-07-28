@@ -29,7 +29,7 @@
 	width: 100vw;
 	min-height: 100vh;
 	background-attachment: fixed;
-	background-image: url(/images/laketrees.jpg);
+	background-image: url(/images/laketrees-min.jpg);
 }
 
 section {
@@ -39,7 +39,7 @@ section {
 	max-height: auto;
 
 	p {
-		font-size: 1.25rem !important;
+		font-size: 1.1rem !important;
 	}
 
 	h1 {
@@ -80,7 +80,7 @@ section {
 			a {
 				border-radius: 5px;
 				padding: 15px;
-				font-size: 1.5rem;
+				font-size: 1.35rem !important;
 			}
 		}
 	}

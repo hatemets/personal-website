@@ -9,6 +9,10 @@
 		position: relative;
 	}
 
+	&.component-container {
+		min-height: 50em;
+	}
+
 	#medium-list {
 		display: flex;
 		justify-content: center;

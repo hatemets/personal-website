@@ -1,5 +1,5 @@
 footer {
-	z-index: -1;
+	z-index: 1;
 	position: absolute;
 	bottom: 0;
 	display: flex;
@@ -8,6 +8,11 @@ footer {
 	width: 100vw;
 	padding: 15px;
 	background-color: $mainColor;
+
+	a {
+		overflow: hidden;
+		font-size: 0.9rem;
+	}
 
 	> * {
 		text-align: center;
