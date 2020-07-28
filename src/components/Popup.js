@@ -24,13 +24,3 @@ const transitionStyles = {
 	exiting: { opacity: 0, zIndex: "100" },
 	exited: { opacity: 0, zIndex: "-100" }
 };
-
-export const Popup = ({ in: inProps, text }) => (
-	<Transition in={inProps} timeout={300}>
-		{state => (
-			<div id="popup" style={{ ...defaultStyles, ...transitionStyles[state] }}>
-				<p style={{ textAlign: "center" }}>{text}</p>
-			</div>
-		)}
-	</Transition>
-);

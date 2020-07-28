@@ -1,17 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer";
 import { pageAnimation } from "../assets/animationProperties";
-import { Popup } from "./Popup";
 
 export const Contact = () => {
-	const [visible, setVisible] = useState(false);
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
 	const discordUser = "azucar#0481";
 
 	const handleClick = _ => {
 		navigator.clipboard.writeText(discordUser);
-		setVisible(true);
-		setTimeout(_ => setVisible(false), 1000);
+		alert("Discord username copied to clipboard!")
 	};
 
 	return (
@@ -54,7 +51,6 @@ export const Contact = () => {
 					</a>
 				</div>
 			</motion.div>
-			<Popup in={visible} text="Username copied to clipboard" />
 		</div>
 	);
 };
