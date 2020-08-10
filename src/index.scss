@@ -12,6 +12,10 @@
 * {
 	overflow-x: hidden;
 
+	body {
+		background: #333;
+	}
+
 	#main-content {
 		position: relative;
 		padding-bottom: $footerHeight;
@@ -80,7 +84,7 @@ section {
 			a {
 				border-radius: 5px;
 				padding: 15px;
-				font-size: 1.25rem;
+				font-size: 1.35em;
 			}
 		}
 	}
