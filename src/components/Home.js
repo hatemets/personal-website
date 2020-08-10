@@ -4,13 +4,8 @@ import { pageAnimation } from "../assets/animationProperties";
 import { arrowWidth } from "../styles/_variables.scss";
 
 const Arrow = ({ id }) => (
-	<svg id={id} className="arrow" width={arrowWidth.slice(0, -2)} height="450" viewBox="0 0 350 450">
-		<path
-			d="M 130 20 l 100 0 l 0 250 l 100 0 l -150 170 l -150 -170 l 100 0 l 0 -250"
-			fill="#ddd"
-			stroke="white"
-			stroke-width="1"
-		></path>
+	<svg id={id} className="arrow" width={arrowWidth.slice(0, -2)} height="100" viewBox="0 0 100 100">
+		<path d="M 0 10 l 50 50 l 50 -50 z" fill="#ddd" stroke="white" stroke-width="1"></path>
 	</svg>
 );
 
