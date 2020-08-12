@@ -58,7 +58,7 @@ export const About = () => {
 						</tr>
 						<tr>
 							<td>200m</td>
-							<td>22.55</td>
+							<td>22.44</td>
 						</tr>
 						<tr>
 							<td>400m</td>
