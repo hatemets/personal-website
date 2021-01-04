@@ -4,12 +4,6 @@ import { pageAnimation } from "../assets/animationProperties";
 
 export const Contact = () => {
 	const { variants: pageVariants, transition: pageTransition } = pageAnimation;
-	const discordUser = "azucar#0481";
-
-	const handleClick = _ => {
-		navigator.clipboard.writeText(discordUser);
-		alert("Discord username copied to clipboard!")
-	};
 
 	return (
 		<div id="contact" className="component-container">
