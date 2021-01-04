@@ -27,8 +27,8 @@ export const About = () => {
 					</h1>
 					<p id="p1">
 						My name is Mark Heidmets and I'm a student from Gustav Adolf Grammar School. I have been
-						learning coding for about 3 years, specializing in web design and browser automation. I
-						am passionate about learning new technologies and concepts every day.
+						learning coding for over 3 years, specializing in web design and browser automation. I
+						am passionate about learning new technologies and concepts each day, hoping to further explore other areas, such as cyber security, game development and back-end development, as well.
 					</p>
 					<br className="break" />
 					<div id="image"></div>
@@ -38,9 +38,8 @@ export const About = () => {
 					</h1>
 					<p id="p2">
 						Outside school and programming, I do track. Sprinting, which is the main event I compete
-						in, has played a huge role in my life, either by improving my discipline, gaining new
-						relations or making me more resilient. I look forward to continuing with track in
-						college as well for it is an activity that I've been doing for over 7 years by now.
+						in, has played a huge role in my life, motivating me to pursue my goals. I look forward to continuing with track in
+						college as well.
 					</p>
 					<h3 id="t3">Personal bests</h3>
 					<table id="tb">

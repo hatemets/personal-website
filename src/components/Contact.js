@@ -24,8 +24,7 @@ export const Contact = () => {
 				<div className="card">
 					<h1 className="title">Contact information</h1>
 					<p>
-						In case you are interested in hiring me, have me build a website for your company or for
-						some other reason, you can contact me via the following mediums:
+						In case you are interested in learning more about me, you can contact me via the following mediums:
 					</p>
 					<ul id="medium-list">
 						<li className="email">
@@ -34,14 +33,7 @@ export const Contact = () => {
 						<li className="facebook">
 							<a href="https://www.facebook.com/hatemets">Facebook</a>
 						</li>
-						<li className="discord" onClick={handleClick}>
-							Discord
-						</li>
 					</ul>
-					<p>
-						Pricing and other details will be discussed during further conversations. It is worth
-						mentioning that since I'm a student, I can only work remotely or work part-time.
-					</p>
 				</div>
 				<div className="card">
 					<h1 className="title">Projects</h1>

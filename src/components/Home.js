@@ -107,7 +107,7 @@ export const Home = () => {
 				<h1>About me</h1>
 				<p>
 					Who am I, anyway? My name is Mark Heidmets and I'm currently studying at Gustav Adolf
-					Grammar School in Tallinn, Estonia. I have been programming for approximately three years,
+					Grammar School in Tallinn, Estonia. I have been programming for over three years,
 					focusing mainly on web design and browser automation.
 				</p>
 				<div className="s3">
@@ -124,13 +124,6 @@ export const Home = () => {
 			</div>
 
 			<section id="section-two">
-				<h1>Get the website you need</h1>
-				<p>
-					User interface is of great importance nowadays alongside user experience in the form of
-					smooth animations. It's for these reasons you need a presentable website which is what I
-					strive to produce. My aim is to be able to provide you with the best possible UI and UX
-					design through which the site would catch the attention of even the most demanding users.
-				</p>
 			</section>
 
 			<div id="image-three" className="image">
